@@ -1,0 +1,8 @@
+[  ]
+# List of selected classes
+class LHEvent
+class LHFiltedEvent
+class LHHit
+class LHRecEvent
+class LHWave
+header LHEvent.h

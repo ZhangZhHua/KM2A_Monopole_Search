@@ -1,0 +1,14 @@
+现在确认可以练出一枚不错的丹药
+
+现在优化能量重建函数，
+
+筛选实验数据
+现在做的是将模型放在实验数据上，看看效果，
+
+手动进行cut，看看实验数据的效果
+
+scp  /home/lhaaso/zhangzhonghua/Filt_Event/Dataset_Filted/Experiment/2022/0510/com* /
+         LENOVO@114.214.188.224:D:/km2a_monopole/Filt_Event/Dataset_Filted/Experiment/2022/0510
+
+scp -r /home/lhaaso/zhangzhonghua/Filt_Event/Dataset_Filted/Experiment/2024/1231/com* /
+         LENOVO@114.214.188.224:D:/km2a_monopole/Filt_Event/Dataset_Filted/Experiment/2024/1231

@@ -1,0 +1,17 @@
+# Data and Binaries
+*.root
+*.npz
+*.hdf5
+*.out
+*.log
+bin/
+build/
+obj/
+lib/
+
+# Python
+__pycache__/
+*.pyc
+
+# System
+.DS_Store

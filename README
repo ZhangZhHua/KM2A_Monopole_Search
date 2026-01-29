@@ -1,0 +1,35 @@
+cd /home/zhonghua/Filt_Event
+
+# 1. 初始化 git
+git init
+
+# 2. 创建 .gitignore 文件，屏蔽数据和中间产物
+# 这对 LHAASO 分析至关重要，防止误传几十GB的数据
+cat > .gitignore <<EOF
+# Data and Binaries
+*.root
+*.npz
+*.hdf5
+*.out
+*.log
+bin/
+build/
+obj/
+lib/
+
+# Python
+__pycache__/
+*.pyc
+
+# System
+.DS_Store
+EOF
+
+# 3. 关联远程仓库 (请替换为你实际的地址)
+git remote add origin git@github.com:ZhangZhHua/KM2A_Monopole_Search.git
+
+# 4. 首次提交
+git add .
+git commit -m "Initial commit: KM2A Monopole Search code"
+git branch -M main
+git push -u origin main
