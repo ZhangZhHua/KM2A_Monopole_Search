@@ -2,7 +2,7 @@
 
 # 1. 配置：进入目录并指定密钥
 cd /home/zhonghua/Filt_Event
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/github_ed25519"
+export GIT_SSH_COMMAND="ssh -i /data/home/zzh/.ssh/id_ed25519"
 
 echo "--- 正在备份 KM2A 磁单极子搜索代码 ---"
 
