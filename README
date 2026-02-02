@@ -33,3 +33,7 @@ git add .
 git commit -m "Initial commit: KM2A Monopole Search code"
 git branch -M main
 git push -u origin main
+
+
+conda activate py312_analysis  
+ conda deactivate 
