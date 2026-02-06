@@ -1,0 +1,22 @@
+<!DOCTYPE Channel SYSTEM "HistFactorySchema.dtd">
+
+<Channel Name="single_channel" InputFile="inputs_for_roostats.root">
+  
+  <Data HistoName="h_data" />
+
+  <StatErrorConfig RelErrorThreshold="0.0" ConstraintType="Poisson" />
+
+  <Sample Name="background" HistoName="h_bkg_nom" NormalizeByTheory="True">
+    <StatError Activate="True" />
+    <NormFactor Name="mu_bkg" Val="1.0" Low="0.0" High="5.0" />
+    <HistoSys Name="energy_scale_sys" HistoNameLow="h_bkg_recE_down" HistoNameHigh="h_bkg_recE_up"/>
+    <HistoSys Name="template_stability_sys" HistoNameLow="h_bkg_rue_down" HistoNameHigh="h_bkg_rue_up"/>
+    <HistoSys Name="model_shape_sys" HistoNameLow="h_bkg_model_lo" HistoNameHigh="h_bkg_model_hi"/>
+  </Sample>
+
+  <Sample Name="signal" HistoName="h_sig_nom" NormalizeByTheory="True">
+    <NormFactor Name="mu" Val="1.0" Low="0.0" High="20.0" />
+    <HistoSys Name="energy_scale_sys" HistoNameLow="h_sig_recE_down" HistoNameHigh="h_sig_recE_up"/>
+  </Sample>
+
+</Channel>
