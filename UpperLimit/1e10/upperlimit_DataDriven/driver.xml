@@ -1,0 +1,11 @@
+<!DOCTYPE Combination  SYSTEM 'HistFactorySchema.dtd'>
+
+<Combination OutputFilePrefix="./results/Monopole_Search">
+  
+  <Input>LHAASO_Channel.xml</Input>
+
+  <Measurement Name="Monopole_Limit_Setting" Lumi="1.0" LumiRelErr="0.00">
+    <POI>mu</POI>
+  </Measurement>
+
+</Combination>

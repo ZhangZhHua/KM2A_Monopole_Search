@@ -1,0 +1,60 @@
+<!ELEMENT Combination (Input+, Measurement+)>
+<!ATTLIST Combination OutputFilePrefix CDATA #REQUIRED>
+<!ELEMENT Input (#PCDATA)>
+<!ELEMENT Measurement (POI, ParamSetting?, ConstraintTerm*)>
+<!ATTLIST Measurement Name CDATA #REQUIRED>
+<!ATTLIST Measurement Lumi CDATA #REQUIRED>
+<!ATTLIST Measurement LumiRelErr CDATA #REQUIRED>
+<!ATTLIST Measurement ExportOnly (True|False) "False">
+<!ELEMENT POI (#PCDATA)>
+<!ELEMENT ParamSetting (#PCDATA)>
+<!ATTLIST ParamSetting Const (True|False) "False">
+<!ELEMENT ConstraintTerm (#PCDATA)>
+<!ATTLIST ConstraintTerm Type CDATA #REQUIRED>
+<!ATTLIST ConstraintTerm RelativeUncertainty CDATA #REQUIRED>
+
+<!ELEMENT Channel (Data, StatErrorConfig?, Sample*)>
+<!ATTLIST Channel Name CDATA #REQUIRED>
+<!ATTLIST Channel InputFile CDATA #IMPLIED>
+<!ELEMENT Data EMPTY>
+<!ATTLIST Data HistoName CDATA #REQUIRED>
+<!ATTLIST Data InputFile CDATA #IMPLIED>
+<!ATTLIST Data HistoPath CDATA #IMPLIED>
+<!ELEMENT StatErrorConfig EMPTY>
+<!ATTLIST StatErrorConfig RelErrorThreshold CDATA #REQUIRED>
+<!ATTLIST StatErrorConfig ConstraintType (Gaussian|Poisson) "Poisson">
+<!ELEMENT Sample (StatError?, NormFactor?, HistoSys*, OverallSys*, ShapeSys*)>
+<!ATTLIST Sample Name CDATA #REQUIRED>
+<!ATTLIST Sample HistoName CDATA #REQUIRED>
+<!ATTLIST Sample InputFile CDATA #IMPLIED>
+<!ATTLIST Sample HistoPath CDATA #IMPLIED>
+<!ATTLIST Sample NormalizeByTheory (True|False) "True">
+<!ELEMENT StatError EMPTY>
+<!ATTLIST StatError Activate (True|False) "False">
+<!ATTLIST StatError InputFile CDATA #IMPLIED>
+<!ATTLIST StatError HistoName CDATA #IMPLIED>
+<!ATTLIST StatError HistoPath CDATA #IMPLIED>
+<!ELEMENT NormFactor EMPTY>
+<!ATTLIST NormFactor Name CDATA #REQUIRED>
+<!ATTLIST NormFactor Val CDATA #REQUIRED>
+<!ATTLIST NormFactor Low CDATA #REQUIRED>
+<!ATTLIST NormFactor High CDATA #REQUIRED>
+<!ATTLIST NormFactor Const (True|False) "False">
+<!ELEMENT HistoSys EMPTY>
+<!ATTLIST HistoSys Name CDATA #REQUIRED>
+<!ATTLIST HistoSys InputFileLow CDATA #IMPLIED>
+<!ATTLIST HistoSys HistoNameLow CDATA #REQUIRED>
+<!ATTLIST HistoSys HistoPathLow CDATA #IMPLIED>
+<!ATTLIST HistoSys InputFileHigh CDATA #IMPLIED>
+<!ATTLIST HistoSys HistoNameHigh CDATA #REQUIRED>
+<!ATTLIST HistoSys HistoPathHigh CDATA #IMPLIED>
+<!ELEMENT OverallSys EMPTY>
+<!ATTLIST OverallSys Name CDATA #REQUIRED>
+<!ATTLIST OverallSys Low CDATA #REQUIRED>
+<!ATTLIST OverallSys High CDATA #REQUIRED>
+<!ELEMENT ShapeSys EMPTY>
+<!ATTLIST ShapeSys Name CDATA #REQUIRED>
+<!ATTLIST ShapeSys InputFile CDATA #IMPLIED>
+<!ATTLIST ShapeSys HistoName CDATA #REQUIRED>
+<!ATTLIST ShapeSys HistoPath CDATA #IMPLIED>
+<!ATTLIST ShapeSys ConstraintType (Gaussian|Poisson) "Gaussian">
