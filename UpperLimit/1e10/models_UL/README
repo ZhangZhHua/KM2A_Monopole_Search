@@ -1,0 +1,18 @@
+/data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/driver.xml
+/data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/single_channel.xml
+/data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/inputs_for_roostats.root
+/data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/HistFactorySchema.dtd
+
+
+conda activate base
+
+cd /data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/
+
+hist2workspace driver.xml && root -l -b -q RunLimit_Plot.C
+
+
+hist2workspace driver.xml && root -l -b -q RunLimit_Freq_Plot.C
+
+root -l RunLimit_Frequentist.C
+
+root -l Hybrid_CLs.C

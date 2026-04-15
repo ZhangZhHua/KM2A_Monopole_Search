@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: lhaaso-monopole-note-figure
+created: 2026-03-17T21:22:26+08:00

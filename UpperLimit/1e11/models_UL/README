@@ -1,0 +1,8 @@
+1 jupyter生成inputs_for_roostats.root
+ conda activate py312_analysis
+hist2workspace driver.xml && root -l -b -q RunLimit_Plot.C
+
+
+hist2workspace driver.xml && root -l -b -q RunLimit_Plot.C  > ./log/RunLimit_Plot.txt
+
+hist2workspace driver.xml && time root -l -b -q Stable_CLs.C  > ./log/Stable_CLs.txt

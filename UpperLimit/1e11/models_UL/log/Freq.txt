@@ -1,0 +1,893 @@
+
+Processing RunLimit_Frequentist.C...
+[INFO] Alpha parameter ranges in workspace:
+  nom_alpha_energy_scale_sys  range=[-10, 10]
+  nom_alpha_template_stability_sys  range=[-10, 10]
+  nom_alpha_model_shape_sys  range=[-10, 10]
+  nom_alpha_horandel_sys  range=[-10, 10]
+  alpha_energy_scale_sys  range=[-5, 5]
+  alpha_template_stability_sys  range=[-5, 5]
+  alpha_model_shape_sys  range=[-5, 5]
+  alpha_horandel_sys  range=[-5, 5]
+Minuit2Minimizer: Minimize with max-calls 7500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = 13.1870630237626187
+Edm   = 0.000398269283802727444
+Nfcn  = 833
+Lumi	  = 1.00003	 +/-  0.00999984	(limited)
+alpha_energy_scale_sys	  = -0.474452	 +/-  0.533923	(limited)
+alpha_horandel_sys	  = -1.6356	 +/-  1.47561	(limited)
+alpha_model_shape_sys	  = 1.12229	 +/-  0.629226	(limited)
+alpha_template_stability_sys	  = -0.670665	 +/-  0.454798	(limited)
+gamma_stat_single_channel_bin_2	  = 0.998654	 +/-  0.112879	(limited)
+gamma_stat_single_channel_bin_3	  = 0.960346	 +/-  0.127672	(limited)
+gamma_stat_single_channel_bin_4	  = 1.06536	 +/-  0.143353	(limited)
+gamma_stat_single_channel_bin_5	  = 1.03996	 +/-  0.173403	(limited)
+gamma_stat_single_channel_bin_6	  = 1.04803	 +/-  0.165246	(limited)
+gamma_stat_single_channel_bin_7	  = 0.936276	 +/-  0.162627	(limited)
+gamma_stat_single_channel_bin_8	  = 0.979477	 +/-  0.15293	(limited)
+gamma_stat_single_channel_bin_9	  = 0.946321	 +/-  0.177747	(limited)
+mu	  = 1.34748e-08	 +/-  0.0014796	(limited)
+mu_bkg	  = 1.6045	 +/-  1.47652	(limited)
+Minuit2Minimizer: Minimize with max-calls 7500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = 13.1867372461252206
+Edm   = 9.90180488267346269e-05
+Nfcn  = 947
+Lumi	  = 0.999998	 +/-  0.00999995	(limited)
+alpha_energy_scale_sys	  = -0.470033	 +/-  0.545535	(limited)
+alpha_horandel_sys	  = -1.65192	 +/-  1.5279	(limited)
+alpha_model_shape_sys	  = 1.12555	 +/-  0.650433	(limited)
+alpha_template_stability_sys	  = -0.666162	 +/-  0.472637	(limited)
+gamma_stat_single_channel_bin_2	  = 0.998324	 +/-  0.112837	(limited)
+gamma_stat_single_channel_bin_3	  = 0.959514	 +/-  0.127894	(limited)
+gamma_stat_single_channel_bin_4	  = 1.06521	 +/-  0.143364	(limited)
+gamma_stat_single_channel_bin_5	  = 1.04027	 +/-  0.173672	(limited)
+gamma_stat_single_channel_bin_6	  = 1.04747	 +/-  0.165243	(limited)
+gamma_stat_single_channel_bin_7	  = 0.936527	 +/-  0.162801	(limited)
+gamma_stat_single_channel_bin_8	  = 0.980235	 +/-  0.153155	(limited)
+gamma_stat_single_channel_bin_9	  = 0.946162	 +/-  0.177798	(limited)
+mu	  = 2.04807e-08	 +/-  0.00148022	(limited)
+mu_bkg	  = 1.62197	 +/-  1.55594	(limited)
+[DEBUG] yield(mu=0) = 106.936
+[DEBUG] yield(mu=1) = 643.392
+
+>>> Starting Frequentist Limit Calculation...
+    nToys=2000  nScanPoints=30  muRange=[0,0.03]
+ProfileLikelihoodTestStat::Evaluate - Use Offset mode "none" in creating NLL
+EvaluateProfileLikelihood - mu hat = 8.94361e-12, uncond ML = 46.6325, cond ML = 46.6324 pll = -0.000110824 time (create/fit1/2) 0 , 0.05 , 0.01
+EvaluateProfileLikelihood - mu hat = 8.04208e-13, uncond ML = 44.0202, cond ML = 44.0198 pll = -0.000346728 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00498124, uncond ML = 45.4847, cond ML = 45.8222 pll = 0.337574 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.16383e-08, uncond ML = 44.0317, cond ML = 44.0315 pll = -0.000153065 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00466361, uncond ML = 41.8122, cond ML = 42.9389 pll = 1.12674 time (create/fit1/2) 0 , 0.02 , 0
+EvaluateProfileLikelihood - mu hat = 1.35656e-09, uncond ML = 47.3458, cond ML = 47.3455 pll = -0.000217912 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00204266, uncond ML = 43.3848, cond ML = 43.4559 pll = 0.0711329 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0097317, uncond ML = 42.5056, cond ML = 43.2554 pll = 0.749721 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.47425e-09, uncond ML = 42.8368, cond ML = 42.8366 pll = -0.0001262 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0101866, uncond ML = 43.3388, cond ML = 45.3509 pll = 2.01203 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00234871, uncond ML = 43.3436, cond ML = 43.4779 pll = 0.134279 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00412599, uncond ML = 43.7871, cond ML = 44.2353 pll = 0.448202 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000323974, uncond ML = 42.2638, cond ML = 42.2654 pll = 0.00155809 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00346241, uncond ML = 42.6933, cond ML = 42.8062 pll = 0.11293 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.63265e-09, uncond ML = 41.5076, cond ML = 41.5074 pll = -0.000267162 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 5.42892e-07, uncond ML = 43.2243, cond ML = 43.2241 pll = -0.00022978 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.43576e-10, uncond ML = 42.9514, cond ML = 42.9511 pll = -0.00031679 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.39536e-09, uncond ML = 43.6734, cond ML = 43.6732 pll = -0.000101474 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.14869e-06, uncond ML = 43.2626, cond ML = 43.2623 pll = -0.000263375 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00359248, uncond ML = 42.5555, cond ML = 42.7804 pll = 0.224899 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00454601, uncond ML = 39.3805, cond ML = 41.1811 pll = 1.80065 time (create/fit1/2) 0 , 0 , 0.13
+EvaluateProfileLikelihood - mu hat = 4.26774e-13, uncond ML = 42.8861, cond ML = 42.886 pll = -7.52542e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.64337e-07, uncond ML = 44.013, cond ML = 44.0127 pll = -0.000253574 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.29881e-09, uncond ML = 42.6558, cond ML = 42.6555 pll = -0.000251929 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.41582e-10, uncond ML = 44.835, cond ML = 44.8349 pll = -7.31763e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.84758e-07, uncond ML = 40.9752, cond ML = 40.975 pll = -0.000214755 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.37317e-12, uncond ML = 47.8184, cond ML = 47.8184 pll = -4.14345e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.70237e-11, uncond ML = 41.9637, cond ML = 41.9635 pll = -0.000174074 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00206805, uncond ML = 45.056, cond ML = 45.1655 pll = 0.109467 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.52087e-08, uncond ML = 43.4572, cond ML = 43.457 pll = -0.000211878 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000870644, uncond ML = 43.8939, cond ML = 43.9197 pll = 0.0258123 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.89353e-08, uncond ML = 43.8053, cond ML = 43.8049 pll = -0.000389552 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.592e-09, uncond ML = 41.299, cond ML = 41.2985 pll = -0.000445238 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00645615, uncond ML = 44.112, cond ML = 44.5393 pll = 0.427338 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 5.25559e-12, uncond ML = 44.1585, cond ML = 44.1582 pll = -0.000323489 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 4.94842e-16, uncond ML = 43.3372, cond ML = 43.3372 pll = -2.37105e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.16847e-08, uncond ML = 45.3891, cond ML = 45.3888 pll = -0.000236234 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.09134e-10, uncond ML = 41.9344, cond ML = 41.9338 pll = -0.000545957 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00116485, uncond ML = 49.6808, cond ML = 49.6993 pll = 0.018522 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.61443e-10, uncond ML = 44.5578, cond ML = 44.5578 pll = -5.60618e-05 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 5.31372e-07, uncond ML = 41.6527, cond ML = 41.6522 pll = -0.000441103 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.0293e-09, uncond ML = 38.9911, cond ML = 38.9909 pll = -0.000180649 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00450278, uncond ML = 45.4129, cond ML = 45.6906 pll = 0.277679 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.24058e-09, uncond ML = 45.3061, cond ML = 45.3061 pll = -5.70176e-07 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 4.31766e-09, uncond ML = 38.7213, cond ML = 38.7213 pll = -5.02881e-06 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 6.0668e-08, uncond ML = 45.7618, cond ML = 45.7615 pll = -0.000257607 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.132e-09, uncond ML = 42.3829, cond ML = 42.3828 pll = -4.51251e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.72975e-07, uncond ML = 43.8625, cond ML = 43.8621 pll = -0.000396019 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.20703e-10, uncond ML = 43.8478, cond ML = 43.8478 pll = -6.20534e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.03672e-09, uncond ML = 42.9038, cond ML = 42.9037 pll = -6.71215e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00136639, uncond ML = 48.7685, cond ML = 48.7897 pll = 0.0211936 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.70083e-07, uncond ML = 44.2727, cond ML = 44.2725 pll = -0.000216756 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0041402, uncond ML = 43.4468, cond ML = 43.7373 pll = 0.290575 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.23606e-10, uncond ML = 45.2046, cond ML = 45.2045 pll = -7.60097e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.68568e-12, uncond ML = 42.8946, cond ML = 42.8945 pll = -6.74663e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.03576e-10, uncond ML = 42.9101, cond ML = 42.9099 pll = -0.000193911 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.79917e-07, uncond ML = 42.3985, cond ML = 42.3975 pll = -0.00103318 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00538169, uncond ML = 44.7449, cond ML = 45.0172 pll = 0.272353 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00591301, uncond ML = 42.6763, cond ML = 43.0326 pll = 0.356291 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00385227, uncond ML = 42.3679, cond ML = 42.6068 pll = 0.23884 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.32641e-08, uncond ML = 47.3131, cond ML = 47.313 pll = -0.000110545 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.15763e-10, uncond ML = 47.1105, cond ML = 47.1105 pll = -3.60516e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00362571, uncond ML = 45.297, cond ML = 45.8159 pll = 0.518865 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.37068e-10, uncond ML = 44.1203, cond ML = 44.1199 pll = -0.000354631 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00140615, uncond ML = 46.0274, cond ML = 46.0911 pll = 0.0636416 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.4178e-08, uncond ML = 47.6461, cond ML = 47.6461 pll = -1.14837e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.47456e-09, uncond ML = 43.006, cond ML = 43.0058 pll = -0.000169892 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.06585e-11, uncond ML = 45.5678, cond ML = 45.5677 pll = -0.0001304 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00195055, uncond ML = 47.2161, cond ML = 47.2706 pll = 0.0545249 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00566346, uncond ML = 41.3652, cond ML = 41.8669 pll = 0.501608 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00032178, uncond ML = 40.9497, cond ML = 40.9523 pll = 0.00263286 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00292481, uncond ML = 43.4507, cond ML = 43.5627 pll = 0.11207 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00261828, uncond ML = 43.8703, cond ML = 44.0293 pll = 0.158995 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000416847, uncond ML = 43.0481, cond ML = 43.0517 pll = 0.00361641 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000284651, uncond ML = 43.4794, cond ML = 43.482 pll = 0.00258635 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0024674, uncond ML = 48.3097, cond ML = 48.4439 pll = 0.134231 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00172618, uncond ML = 42.9965, cond ML = 43.0378 pll = 0.0412744 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.76209e-09, uncond ML = 45.5981, cond ML = 45.5979 pll = -0.000234016 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00190661, uncond ML = 42.5323, cond ML = 42.6491 pll = 0.116763 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.4131e-08, uncond ML = 44.2857, cond ML = 44.2854 pll = -0.000348282 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000235185, uncond ML = 47.444, cond ML = 47.4443 pll = 0.000282386 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00286346, uncond ML = 46.0425, cond ML = 46.2195 pll = 0.177083 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00627889, uncond ML = 43.0539, cond ML = 43.9473 pll = 0.893426 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.000748507, uncond ML = 43.941, cond ML = 43.9595 pll = 0.0185108 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0118617, uncond ML = 48.4569, cond ML = 49.6118 pll = 1.15485 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00431868, uncond ML = 43.1535, cond ML = 43.4675 pll = 0.313978 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.71656e-09, uncond ML = 43.0866, cond ML = 43.0864 pll = -0.000143064 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00349373, uncond ML = 43.5268, cond ML = 43.6684 pll = 0.141539 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00209401, uncond ML = 43.2472, cond ML = 43.336 pll = 0.0887975 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00103079, uncond ML = 44.1478, cond ML = 44.1548 pll = 0.00701387 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00882011, uncond ML = 45.998, cond ML = 46.6198 pll = 0.621779 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.22663e-09, uncond ML = 41.9827, cond ML = 41.9815 pll = -0.00118937 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00199413, uncond ML = 43.1141, cond ML = 43.1945 pll = 0.080467 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.15709e-09, uncond ML = 42.7293, cond ML = 42.729 pll = -0.000331414 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.89499e-09, uncond ML = 43.5863, cond ML = 43.586 pll = -0.000293391 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00461977, uncond ML = 43.1295, cond ML = 44.4904 pll = 1.36092 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 2.62868e-09, uncond ML = 40.3153, cond ML = 40.3153 pll = -6.16893e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.01476e-10, uncond ML = 46.7545, cond ML = 46.7545 pll = -2.35914e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.80337e-07, uncond ML = 41.6702, cond ML = 41.67 pll = -0.000183414 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.87116e-08, uncond ML = 43.0742, cond ML = 43.0737 pll = -0.000516826 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00274277, uncond ML = 43.3296, cond ML = 43.5228 pll = 0.193241 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00079565, uncond ML = 41.4015, cond ML = 41.4263 pll = 0.0248485 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000532084, uncond ML = 40.1162, cond ML = 40.1276 pll = 0.0114273 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.00681e-06, uncond ML = 41.7488, cond ML = 41.7482 pll = -0.000565064 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.71528e-07, uncond ML = 44.7077, cond ML = 44.7075 pll = -0.000188506 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.64342e-07, uncond ML = 42.3825, cond ML = 42.3824 pll = -9.84146e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.93708e-15, uncond ML = 40.8096, cond ML = 40.8094 pll = -0.000164546 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.88134e-06, uncond ML = 41.7947, cond ML = 41.794 pll = -0.000669681 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00667079, uncond ML = 40.7646, cond ML = 42.6108 pll = 1.84622 time (create/fit1/2) 0 , 0.01 , 0.17
+EvaluateProfileLikelihood - mu hat = 1.1348e-14, uncond ML = 43.8816, cond ML = 43.8814 pll = -0.000150303 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 6.2167e-09, uncond ML = 39.6642, cond ML = 39.6641 pll = -8.64005e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00961643, uncond ML = 46.4958, cond ML = 47.8168 pll = 1.32104 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00588196, uncond ML = 43.1533, cond ML = 43.756 pll = 0.602667 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00267427, uncond ML = 43.7778, cond ML = 43.9088 pll = 0.131005 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00148348, uncond ML = 41.9903, cond ML = 42.0396 pll = 0.0492562 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.3454e-09, uncond ML = 40.3122, cond ML = 40.3116 pll = -0.000596474 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00338553, uncond ML = 43.2881, cond ML = 43.889 pll = 0.600855 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.61517e-10, uncond ML = 43.6978, cond ML = 43.6978 pll = -1.07911e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0020987, uncond ML = 40.1739, cond ML = 40.3972 pll = 0.223265 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.64181e-10, uncond ML = 47.8321, cond ML = 47.8321 pll = -3.09222e-05 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.30226e-08, uncond ML = 41.5989, cond ML = 41.5989 pll = -1.77005e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00149369, uncond ML = 43.038, cond ML = 43.0881 pll = 0.0501073 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00349824, uncond ML = 45.5496, cond ML = 45.7352 pll = 0.185547 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00602228, uncond ML = 42.896, cond ML = 43.4635 pll = 0.567518 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.35428e-08, uncond ML = 42.6997, cond ML = 42.6991 pll = -0.000557683 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00383248, uncond ML = 41.4211, cond ML = 41.702 pll = 0.280806 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00112018, uncond ML = 38.9237, cond ML = 39.0309 pll = 0.107232 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00229245, uncond ML = 41.3831, cond ML = 41.4377 pll = 0.0545052 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.73285e-15, uncond ML = 43.2666, cond ML = 43.2666 pll = -3.33585e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.4639e-08, uncond ML = 43.3816, cond ML = 43.3811 pll = -0.00050579 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00168563, uncond ML = 42.678, cond ML = 42.726 pll = 0.0480267 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000809445, uncond ML = 45.4432, cond ML = 45.4622 pll = 0.0189768 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.79515e-08, uncond ML = 42.4579, cond ML = 42.4575 pll = -0.00043176 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000925458, uncond ML = 40.3501, cond ML = 40.3729 pll = 0.0227473 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0111489, uncond ML = 45.5096, cond ML = 47.1967 pll = 1.68711 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.001234, uncond ML = 44.9887, cond ML = 44.9999 pll = 0.011256 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.28471e-10, uncond ML = 47.2992, cond ML = 47.2989 pll = -0.000348243 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00450649, uncond ML = 42.2597, cond ML = 42.812 pll = 0.552312 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.47522e-06, uncond ML = 40.3363, cond ML = 40.3361 pll = -0.000187977 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.31431e-10, uncond ML = 51.7197, cond ML = 51.7196 pll = -0.000101747 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00433693, uncond ML = 43.3107, cond ML = 43.6145 pll = 0.303785 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.21956e-10, uncond ML = 42.0395, cond ML = 42.0394 pll = -0.000185086 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.75299e-10, uncond ML = 44.3099, cond ML = 44.3085 pll = -0.00135948 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00617599, uncond ML = 45.6252, cond ML = 45.9341 pll = 0.308905 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.97733e-09, uncond ML = 40.7625, cond ML = 40.7624 pll = -9.7758e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00175733, uncond ML = 42.3608, cond ML = 42.4268 pll = 0.066017 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.0376e-12, uncond ML = 44.4847, cond ML = 44.4843 pll = -0.000332639 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000128691, uncond ML = 42.6112, cond ML = 42.6111 pll = -0.000117899 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.42297e-08, uncond ML = 41.5788, cond ML = 41.578 pll = -0.000804455 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.12034e-10, uncond ML = 41.8558, cond ML = 41.8556 pll = -0.000160869 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.2968e-07, uncond ML = 43.8862, cond ML = 43.8861 pll = -0.00010832 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00870894, uncond ML = 43.6559, cond ML = 44.8221 pll = 1.16621 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000788605, uncond ML = 41.1251, cond ML = 41.1372 pll = 0.0120658 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.23047e-07, uncond ML = 47.9618, cond ML = 47.9616 pll = -0.000175175 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00488799, uncond ML = 45.0136, cond ML = 45.2067 pll = 0.19312 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.68537e-08, uncond ML = 43.6036, cond ML = 43.6035 pll = -0.000101502 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.04686e-08, uncond ML = 43.4436, cond ML = 43.4434 pll = -0.00021547 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 8.70811e-13, uncond ML = 39.8304, cond ML = 39.8299 pll = -0.000443979 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00392412, uncond ML = 43.1796, cond ML = 43.5444 pll = 0.36473 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.02145e-07, uncond ML = 42.7675, cond ML = 42.7665 pll = -0.00104952 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.02472e-12, uncond ML = 44.1187, cond ML = 44.1187 pll = -1.79828e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.61212e-08, uncond ML = 42.4173, cond ML = 42.4169 pll = -0.000357372 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.95466e-09, uncond ML = 42.2103, cond ML = 42.2103 pll = -2.84143e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0161324, uncond ML = 43.1293, cond ML = 45.4195 pll = 2.29015 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.04637e-07, uncond ML = 44.4952, cond ML = 44.4952 pll = -3.08569e-06 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00073323, uncond ML = 40.1441, cond ML = 40.1591 pll = 0.0150062 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.59359e-11, uncond ML = 45.2135, cond ML = 45.2135 pll = -9.82102e-08 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.01935e-11, uncond ML = 41.7456, cond ML = 41.7456 pll = -1.53925e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000535825, uncond ML = 43.5897, cond ML = 43.602 pll = 0.0123516 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 8.80717e-09, uncond ML = 45.9401, cond ML = 45.9399 pll = -0.000157969 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.83124e-05, uncond ML = 43.9208, cond ML = 43.9205 pll = -0.000317245 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00373482, uncond ML = 42.7324, cond ML = 43.2937 pll = 0.561258 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00213839, uncond ML = 48.3933, cond ML = 48.5249 pll = 0.131557 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 1.66533e-18, uncond ML = 45.9784, cond ML = 45.9784 pll = -2.59446e-05 time (create/fit1/2) 0 , 0.01 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00218084, uncond ML = 44.2868, cond ML = 44.3059 pll = 0.0190654 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.7813e-08, uncond ML = 47.7517, cond ML = 47.7514 pll = -0.000283211 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.94321e-07, uncond ML = 45.1214, cond ML = 45.1213 pll = -9.85336e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.91963e-15, uncond ML = 39.8135, cond ML = 39.8135 pll = -3.22006e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.44523e-12, uncond ML = 47.5145, cond ML = 47.5145 pll = -1.28539e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00272665, uncond ML = 40.9036, cond ML = 40.9994 pll = 0.0958043 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0018888, uncond ML = 45.0504, cond ML = 45.0844 pll = 0.0340175 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00022971, uncond ML = 43.6263, cond ML = 43.6266 pll = 0.000304899 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.19553e-13, uncond ML = 43.5946, cond ML = 43.5946 pll = -1.99953e-06 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.54158e-07, uncond ML = 46.6562, cond ML = 46.6559 pll = -0.000300191 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.40212e-13, uncond ML = 42.8796, cond ML = 42.8796 pll = -1.10398e-05 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.75948e-09, uncond ML = 42.6251, cond ML = 42.6249 pll = -0.000156975 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00693138, uncond ML = 43.2487, cond ML = 43.9758 pll = 0.727112 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 1.50392e-09, uncond ML = 41.4935, cond ML = 41.4935 pll = -5.47421e-06 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00279076, uncond ML = 46.8097, cond ML = 46.9442 pll = 0.134446 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.6132e-07, uncond ML = 41.7, cond ML = 41.6998 pll = -0.000184162 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00184684, uncond ML = 40.5803, cond ML = 40.9334 pll = 0.353078 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0102826, uncond ML = 41.9412, cond ML = 43.0437 pll = 1.10249 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00582931, uncond ML = 45.9809, cond ML = 46.5328 pll = 0.551916 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000947438, uncond ML = 42.6951, cond ML = 42.7078 pll = 0.0127613 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00316545, uncond ML = 44.0668, cond ML = 44.2176 pll = 0.150763 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.42665e-09, uncond ML = 42.0031, cond ML = 42.003 pll = -9.87082e-05 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.23141e-14, uncond ML = 43.9053, cond ML = 43.9052 pll = -7.17511e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.48218e-09, uncond ML = 44.2464, cond ML = 44.2462 pll = -0.000127651 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00219784, uncond ML = 43.2456, cond ML = 43.3179 pll = 0.0723719 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00310083, uncond ML = 41.9208, cond ML = 42.2175 pll = 0.296767 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.31741e-08, uncond ML = 41.1566, cond ML = 41.1564 pll = -0.00026509 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00280328, uncond ML = 41.8659, cond ML = 42.0039 pll = 0.138026 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00445466, uncond ML = 40.4001, cond ML = 42.4698 pll = 2.06975 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 7.04429e-09, uncond ML = 46.8944, cond ML = 46.8941 pll = -0.000267002 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00725476, uncond ML = 42.0449, cond ML = 43.21 pll = 1.1651 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0112242, uncond ML = 44.6756, cond ML = 45.7151 pll = 1.03943 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.69837e-09, uncond ML = 43.5623, cond ML = 43.5622 pll = -0.000129802 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.9955e-09, uncond ML = 43.4161, cond ML = 43.4154 pll = -0.000700262 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00942919, uncond ML = 44.354, cond ML = 46.0134 pll = 1.65943 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.28139e-09, uncond ML = 44.509, cond ML = 44.5076 pll = -0.0013866 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000290505, uncond ML = 42.7151, cond ML = 42.7149 pll = -0.000233925 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000241034, uncond ML = 43.9063, cond ML = 43.9062 pll = -0.000162844 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.29406e-07, uncond ML = 44.1891, cond ML = 44.1889 pll = -0.000162328 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.20756e-05, uncond ML = 49.7206, cond ML = 49.7205 pll = -9.89434e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.50898e-06, uncond ML = 44.0002, cond ML = 43.9997 pll = -0.000478529 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.97632e-13, uncond ML = 43.8193, cond ML = 43.8193 pll = -2.53598e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00311034, uncond ML = 41.9646, cond ML = 42.141 pll = 0.176366 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.60196e-09, uncond ML = 43.4156, cond ML = 43.4154 pll = -0.000190487 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00700881, uncond ML = 46.9813, cond ML = 47.6976 pll = 0.716311 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000369403, uncond ML = 41.9168, cond ML = 41.9212 pll = 0.00444763 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00105194, uncond ML = 43.0342, cond ML = 43.0464 pll = 0.0122172 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.45663e-10, uncond ML = 42.9897, cond ML = 42.9895 pll = -0.000168992 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00620077, uncond ML = 44.4345, cond ML = 44.9633 pll = 0.528801 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 3.73056e-10, uncond ML = 43.3442, cond ML = 43.3442 pll = -1.40929e-05 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.7038e-08, uncond ML = 44.5311, cond ML = 44.5308 pll = -0.000344712 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.61596e-10, uncond ML = 44.8673, cond ML = 44.8664 pll = -0.000890036 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.00492e-10, uncond ML = 47.1236, cond ML = 47.1235 pll = -9.87678e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0031328, uncond ML = 49.1811, cond ML = 49.3135 pll = 0.132469 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0042537, uncond ML = 47.1048, cond ML = 47.2304 pll = 0.125638 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.16853e-09, uncond ML = 42.8812, cond ML = 42.8811 pll = -8.00998e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00472406, uncond ML = 44.1136, cond ML = 44.4803 pll = 0.366731 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00435224, uncond ML = 45.4034, cond ML = 46.0569 pll = 0.653535 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00343403, uncond ML = 42.6021, cond ML = 42.8013 pll = 0.199186 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00296519, uncond ML = 45.546, cond ML = 45.7532 pll = 0.207245 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.92799e-09, uncond ML = 40.6552, cond ML = 40.655 pll = -0.000233177 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.48411e-08, uncond ML = 41.6241, cond ML = 41.6241 pll = -6.17876e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00582665, uncond ML = 42.7567, cond ML = 43.2122 pll = 0.455583 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 9.07571e-08, uncond ML = 42.0324, cond ML = 42.032 pll = -0.000365115 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00271567, uncond ML = 43.4416, cond ML = 43.5286 pll = 0.0869982 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 9.67177e-09, uncond ML = 47.3192, cond ML = 47.3191 pll = -0.000117889 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.3992e-15, uncond ML = 43.1206, cond ML = 43.1203 pll = -0.000377642 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.31367e-05, uncond ML = 41.6558, cond ML = 41.656 pll = 0.000134104 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.35402e-07, uncond ML = 41.7167, cond ML = 41.7166 pll = -0.000154801 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00460202, uncond ML = 43.3113, cond ML = 43.5332 pll = 0.221874 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000147125, uncond ML = 43.5519, cond ML = 43.5519 pll = 4.03895e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 9.19891e-08, uncond ML = 42.5292, cond ML = 42.5288 pll = -0.00031851 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.28984e-15, uncond ML = 44.6648, cond ML = 44.6648 pll = -2.14267e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00217091, uncond ML = 44.6287, cond ML = 44.702 pll = 0.0732928 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00469631, uncond ML = 42.2398, cond ML = 42.4623 pll = 0.222461 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.33375e-08, uncond ML = 47.4947, cond ML = 47.4946 pll = -0.00012698 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.8232e-07, uncond ML = 44.848, cond ML = 44.8476 pll = -0.000401453 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.27193e-10, uncond ML = 44.9122, cond ML = 44.9122 pll = -1.05071e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.44281e-07, uncond ML = 46.7295, cond ML = 46.7294 pll = -0.000173153 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00214941, uncond ML = 45.8286, cond ML = 45.8593 pll = 0.030719 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.78486e-07, uncond ML = 43.1359, cond ML = 43.1357 pll = -0.000208015 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.28028e-10, uncond ML = 43.0246, cond ML = 43.0237 pll = -0.000910319 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.03655e-11, uncond ML = 44.2472, cond ML = 44.2467 pll = -0.000447522 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000197097, uncond ML = 43.4776, cond ML = 43.4788 pll = 0.00120141 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00443692, uncond ML = 45.3737, cond ML = 46.2024 pll = 0.828747 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000647429, uncond ML = 40.0377, cond ML = 40.0541 pll = 0.0164114 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.94485e-09, uncond ML = 44.2787, cond ML = 44.2787 pll = -2.05437e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.28859e-08, uncond ML = 47.3824, cond ML = 47.3823 pll = -0.00012098 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.43512e-09, uncond ML = 43.2399, cond ML = 43.2395 pll = -0.00035582 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0066972, uncond ML = 45.0519, cond ML = 45.8043 pll = 0.752416 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00222856, uncond ML = 45.3251, cond ML = 45.4029 pll = 0.0777897 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0145297, uncond ML = 42.5131, cond ML = 45.7005 pll = 3.18743 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00328859, uncond ML = 41.0614, cond ML = 41.6539 pll = 0.592454 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0082231, uncond ML = 41.2247, cond ML = 42.7524 pll = 1.52768 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 6.9027e-08, uncond ML = 41.3101, cond ML = 41.0873 pll = -0.222811 time (create/fit1/2) 0 , 0.02 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00383327, uncond ML = 44.8526, cond ML = 45.1452 pll = 0.292576 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0040677, uncond ML = 41.2364, cond ML = 41.5607 pll = 0.324314 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.61572e-12, uncond ML = 42.1396, cond ML = 42.1396 pll = -5.26735e-08 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.13523e-05, uncond ML = 41.9375, cond ML = 41.9376 pll = 9.50689e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.86149e-08, uncond ML = 43.5831, cond ML = 43.5828 pll = -0.000321065 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00362571, uncond ML = 43.707, cond ML = 43.9306 pll = 0.223662 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00289756, uncond ML = 43.8628, cond ML = 43.9734 pll = 0.110659 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 1.05353e-09, uncond ML = 41.3973, cond ML = 41.3871 pll = -0.0101647 time (create/fit1/2) 0 , 0.02 , 0.01
+EvaluateProfileLikelihood - mu hat = 9.46703e-08, uncond ML = 44.8305, cond ML = 44.8302 pll = -0.000336723 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.69352e-10, uncond ML = 43.3119, cond ML = 43.3117 pll = -0.000202015 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00253673, uncond ML = 42.3777, cond ML = 42.4947 pll = 0.117066 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.09764e-07, uncond ML = 41.9356, cond ML = 41.9354 pll = -0.000205214 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.74381e-11, uncond ML = 43.2877, cond ML = 43.2877 pll = -5.30168e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.44871e-06, uncond ML = 49.7425, cond ML = 49.7418 pll = -0.000726569 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.19669e-11, uncond ML = 43.2651, cond ML = 43.2651 pll = -9.44839e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0114783, uncond ML = 43.1025, cond ML = 44.151 pll = 1.04849 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000686279, uncond ML = 47.8026, cond ML = 47.8061 pll = 0.00356827 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.91928e-08, uncond ML = 42.3684, cond ML = 42.368 pll = -0.000310376 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.10726e-05, uncond ML = 41.6574, cond ML = 41.6572 pll = -0.000174829 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.6639e-09, uncond ML = 43.2472, cond ML = 43.2465 pll = -0.00064688 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.0419e-07, uncond ML = 48.3547, cond ML = 48.3543 pll = -0.000432855 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.33674e-09, uncond ML = 43.4479, cond ML = 43.4478 pll = -0.000109805 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00505408, uncond ML = 47.2505, cond ML = 47.6711 pll = 0.420614 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.79173e-09, uncond ML = 47.3679, cond ML = 47.3677 pll = -0.000240063 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 4.4778e-08, uncond ML = 43.1714, cond ML = 43.1714 pll = -6.82996e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.39468e-09, uncond ML = 43.1489, cond ML = 43.1485 pll = -0.000401648 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00206776, uncond ML = 44.7651, cond ML = 44.8551 pll = 0.0899518 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0056206, uncond ML = 46.0914, cond ML = 46.4258 pll = 0.334341 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000884351, uncond ML = 47.1498, cond ML = 47.1595 pll = 0.0096277 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00274719, uncond ML = 42.2402, cond ML = 42.3846 pll = 0.144463 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.14396e-09, uncond ML = 42.1822, cond ML = 42.1818 pll = -0.000387811 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000338812, uncond ML = 41.8001, cond ML = 41.8066 pll = 0.00647334 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.15411e-08, uncond ML = 42.9334, cond ML = 42.9333 pll = -0.000162923 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00709901, uncond ML = 40.9039, cond ML = 41.3456 pll = 0.441714 time (create/fit1/2) 0 , 0 , 0.13
+EvaluateProfileLikelihood - mu hat = 4.87823e-09, uncond ML = 40.4757, cond ML = 40.4756 pll = -8.62864e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000566173, uncond ML = 44.9537, cond ML = 44.9577 pll = 0.00398123 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.42726e-14, uncond ML = 46.7648, cond ML = 46.7648 pll = -1.6022e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00488025, uncond ML = 45.1244, cond ML = 45.5646 pll = 0.440169 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000730811, uncond ML = 41.9889, cond ML = 42.0089 pll = 0.0200347 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.23713e-08, uncond ML = 42.9606, cond ML = 42.9605 pll = -0.000181475 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.57433e-08, uncond ML = 41.6184, cond ML = 41.6181 pll = -0.000381394 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.431e-09, uncond ML = 50.2527, cond ML = 50.2527 pll = -6.41267e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00636248, uncond ML = 40.3573, cond ML = 41.2991 pll = 0.94181 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.30327e-07, uncond ML = 45.6344, cond ML = 45.6339 pll = -0.00052074 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.85615e-06, uncond ML = 41.9958, cond ML = 41.9956 pll = -0.000190119 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.58916e-09, uncond ML = 45.1466, cond ML = 45.1464 pll = -0.000203701 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.72139e-07, uncond ML = 46.5721, cond ML = 46.5718 pll = -0.000297183 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.91032e-08, uncond ML = 43.7595, cond ML = 43.7595 pll = -9.45169e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00635427, uncond ML = 44.4885, cond ML = 44.9232 pll = 0.434718 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.55694e-12, uncond ML = 47.9988, cond ML = 47.9988 pll = -7.34491e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.0156e-07, uncond ML = 43.0652, cond ML = 43.065 pll = -0.000218084 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00428625, uncond ML = 42.7339, cond ML = 43.0191 pll = 0.285224 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000378661, uncond ML = 47.3561, cond ML = 47.3576 pll = 0.00149957 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.28476e-08, uncond ML = 40.3815, cond ML = 40.3814 pll = -5.59086e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.23325e-13, uncond ML = 45.0838, cond ML = 45.0838 pll = -1.11827e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00920403, uncond ML = 42.804, cond ML = 43.8227 pll = 1.01871 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.15897e-10, uncond ML = 45.5212, cond ML = 45.5212 pll = -1.79935e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.49061e-11, uncond ML = 44.59, cond ML = 44.59 pll = -3.9408e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.22719e-08, uncond ML = 42.9422, cond ML = 42.9422 pll = -8.18306e-05 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00727265, uncond ML = 44.2902, cond ML = 45.2609 pll = 0.970767 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00942516, uncond ML = 41.4639, cond ML = 42.8428 pll = 1.37885 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00250054, uncond ML = 41.5895, cond ML = 41.6924 pll = 0.102882 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.82545e-09, uncond ML = 47.7463, cond ML = 47.7463 pll = -3.15033e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.2603e-07, uncond ML = 43.7341, cond ML = 43.7338 pll = -0.000309234 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00751403, uncond ML = 41.6796, cond ML = 42.6697 pll = 0.990113 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.17716e-09, uncond ML = 44.5662, cond ML = 44.5658 pll = -0.000322546 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.36454e-11, uncond ML = 45.6015, cond ML = 45.6015 pll = -3.24983e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00127052, uncond ML = 42.638, cond ML = 42.6718 pll = 0.0338039 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.003699, uncond ML = 44.299, cond ML = 44.5906 pll = 0.291535 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00134068, uncond ML = 42.8542, cond ML = 42.8757 pll = 0.0214375 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.11858e-10, uncond ML = 45.9129, cond ML = 45.9129 pll = -7.51562e-06 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000197618, uncond ML = 44.1287, cond ML = 44.1288 pll = 6.07879e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.66806e-07, uncond ML = 43.6564, cond ML = 43.6562 pll = -0.000205159 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.64548e-12, uncond ML = 42.891, cond ML = 42.891 pll = -5.85316e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000884512, uncond ML = 44.1764, cond ML = 44.2203 pll = 0.0439092 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00184191, uncond ML = 47.1274, cond ML = 47.1648 pll = 0.0374011 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 4.50529e-07, uncond ML = 41.56, cond ML = 41.5599 pll = -0.000189506 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.03843e-08, uncond ML = 42.4153, cond ML = 42.4152 pll = -0.00014099 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000759039, uncond ML = 43.9258, cond ML = 43.9387 pll = 0.0129239 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.60572e-10, uncond ML = 41.9065, cond ML = 41.9063 pll = -0.000138351 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.25475e-06, uncond ML = 41.8049, cond ML = 41.8048 pll = -0.000152806 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00249357, uncond ML = 43.3032, cond ML = 43.4313 pll = 0.128019 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00399918, uncond ML = 49.1825, cond ML = 49.6666 pll = 0.484051 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00442885, uncond ML = 43.5749, cond ML = 43.8276 pll = 0.252698 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.96777e-05, uncond ML = 40.6731, cond ML = 40.6726 pll = -0.000524134 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.22615e-11, uncond ML = 40.8657, cond ML = 40.8657 pll = -2.98434e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.35785e-09, uncond ML = 44.9813, cond ML = 44.9813 pll = -1.52933e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000453034, uncond ML = 45.8164, cond ML = 45.8188 pll = 0.00238738 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.26427e-06, uncond ML = 46.5594, cond ML = 46.5593 pll = -0.000146273 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00887295, uncond ML = 41.8185, cond ML = 42.7204 pll = 0.901836 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.21652e-09, uncond ML = 43.6888, cond ML = 43.6885 pll = -0.000266962 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.000957862, uncond ML = 41.8554, cond ML = 41.8811 pll = 0.0256803 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00366417, uncond ML = 43.8302, cond ML = 43.9798 pll = 0.149621 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000162562, uncond ML = 47.3278, cond ML = 47.3282 pll = 0.00030216 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.32491e-07, uncond ML = 43.5553, cond ML = 43.5549 pll = -0.000375216 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0155406, uncond ML = 44.6681, cond ML = 47.2371 pll = 2.56898 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.28195e-07, uncond ML = 44.2047, cond ML = 44.2046 pll = -0.000131965 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.44162e-07, uncond ML = 42.7858, cond ML = 42.7857 pll = -6.10916e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00428567, uncond ML = 41.0929, cond ML = 41.5697 pll = 0.476813 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00227971, uncond ML = 41.5913, cond ML = 41.6796 pll = 0.0882739 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00458098, uncond ML = 44.0086, cond ML = 44.247 pll = 0.238375 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0109605, uncond ML = 44.5279, cond ML = 45.6982 pll = 1.17024 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00422626, uncond ML = 40.3337, cond ML = 40.6528 pll = 0.319113 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00134108, uncond ML = 42.6481, cond ML = 42.6776 pll = 0.0295138 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.65919e-07, uncond ML = 47.6869, cond ML = 47.6864 pll = -0.000469885 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.4447e-06, uncond ML = 42.2039, cond ML = 42.2039 pll = -8.09483e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.48567e-08, uncond ML = 46.2226, cond ML = 46.2226 pll = -2.3002e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00532691, uncond ML = 44.8883, cond ML = 45.2585 pll = 0.370211 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00656194, uncond ML = 41.6782, cond ML = 42.1557 pll = 0.477467 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00317592, uncond ML = 43.321, cond ML = 43.4942 pll = 0.173244 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.67798e-07, uncond ML = 41.812, cond ML = 41.8119 pll = -0.000112047 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00186632, uncond ML = 43.3536, cond ML = 43.423 pll = 0.0694339 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00980151, uncond ML = 44.1112, cond ML = 45.494 pll = 1.38279 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.72631e-07, uncond ML = 44.7055, cond ML = 44.7053 pll = -0.000222215 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.71116e-09, uncond ML = 42.5629, cond ML = 42.5628 pll = -0.000153007 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00130247, uncond ML = 41.7439, cond ML = 41.7822 pll = 0.0383045 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.47878e-08, uncond ML = 47.0928, cond ML = 47.0926 pll = -0.00017793 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.63126e-09, uncond ML = 46.7737, cond ML = 46.7733 pll = -0.000366391 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 9.4776e-09, uncond ML = 43.27, cond ML = 43.2699 pll = -0.000156964 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.85618e-13, uncond ML = 45.1222, cond ML = 45.1222 pll = -1.25285e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.51034e-09, uncond ML = 44.8449, cond ML = 44.8447 pll = -0.000220724 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00909902, uncond ML = 43.8983, cond ML = 44.7681 pll = 0.869763 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00977474, uncond ML = 47.4094, cond ML = 48.9616 pll = 1.5522 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 2.52086e-11, uncond ML = 44.5825, cond ML = 44.5822 pll = -0.000329416 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.23991e-09, uncond ML = 41.4032, cond ML = 41.4029 pll = -0.000304693 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 1.45941e-09, uncond ML = 41.3031, cond ML = 41.3031 pll = -1.08665e-07 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00129949, uncond ML = 40.5967, cond ML = 40.6654 pll = 0.0686975 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.96248e-11, uncond ML = 46.8759, cond ML = 46.8757 pll = -0.000221059 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00549967, uncond ML = 42.3839, cond ML = 42.8037 pll = 0.419805 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.1623e-09, uncond ML = 49.4691, cond ML = 49.4687 pll = -0.000432659 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.9378e-09, uncond ML = 41.7059, cond ML = 41.7056 pll = -0.000225727 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.54406e-09, uncond ML = 43.8988, cond ML = 43.8983 pll = -0.000470715 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00537348, uncond ML = 42.6095, cond ML = 43.0732 pll = 0.463639 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00558908, uncond ML = 49.9071, cond ML = 50.3672 pll = 0.46009 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.76904e-09, uncond ML = 41.5701, cond ML = 41.5699 pll = -0.000189986 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.66191e-11, uncond ML = 45.6761, cond ML = 45.6759 pll = -0.000266709 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00343396, uncond ML = 43.355, cond ML = 43.6089 pll = 0.253828 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00305459, uncond ML = 44.4688, cond ML = 44.6206 pll = 0.151835 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.71299e-10, uncond ML = 42.338, cond ML = 42.3373 pll = -0.000700924 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.16316e-06, uncond ML = 46.3006, cond ML = 46.3003 pll = -0.000278459 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00644703, uncond ML = 45.6382, cond ML = 46.3072 pll = 0.669011 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0124997, uncond ML = 44.793, cond ML = 46.9197 pll = 2.12664 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00100159, uncond ML = 42.7805, cond ML = 42.7975 pll = 0.0170111 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000501578, uncond ML = 46.7617, cond ML = 46.774 pll = 0.0122069 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.53679e-07, uncond ML = 39.6687, cond ML = 39.6682 pll = -0.000527165 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00270053, uncond ML = 44.3154, cond ML = 44.3977 pll = 0.0822878 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.2987e-07, uncond ML = 44.9398, cond ML = 44.9396 pll = -0.000276112 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 1.51698e-11, uncond ML = 40.2342, cond ML = 40.2341 pll = -4.027e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00859878, uncond ML = 41.5255, cond ML = 42.4916 pll = 0.966184 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00301455, uncond ML = 42.379, cond ML = 42.5094 pll = 0.13042 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.01088e-07, uncond ML = 45.7771, cond ML = 45.7768 pll = -0.000316472 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.82397e-09, uncond ML = 45.4992, cond ML = 45.4988 pll = -0.000419485 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.29408e-05, uncond ML = 41.1517, cond ML = 41.1519 pll = 0.00019163 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.79391e-07, uncond ML = 42.6018, cond ML = 42.6015 pll = -0.00026854 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.50178e-09, uncond ML = 43.3538, cond ML = 43.3538 pll = -7.1268e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00337685, uncond ML = 45.521, cond ML = 45.6425 pll = 0.121509 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0034526, uncond ML = 41.0997, cond ML = 41.3599 pll = 0.260178 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 4.90822e-15, uncond ML = 42.2755, cond ML = 42.2752 pll = -0.000342023 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.96111e-11, uncond ML = 42.3661, cond ML = 42.3652 pll = -0.000848093 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.384e-11, uncond ML = 41.9801, cond ML = 41.9798 pll = -0.000232629 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00872328, uncond ML = 41.6179, cond ML = 44.6495 pll = 3.03162 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.50172e-12, uncond ML = 42.0939, cond ML = 42.0938 pll = -0.000101681 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.0058e-08, uncond ML = 42.6849, cond ML = 42.6846 pll = -0.000261498 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00580265, uncond ML = 44.2673, cond ML = 44.7785 pll = 0.51124 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.08011e-06, uncond ML = 48.5734, cond ML = 48.5729 pll = -0.000407895 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00650843, uncond ML = 43.078, cond ML = 43.6 pll = 0.522068 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 6.61325e-10, uncond ML = 43.1507, cond ML = 43.1504 pll = -0.000288666 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.72915e-10, uncond ML = 39.9132, cond ML = 39.9131 pll = -0.000120419 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.26914e-08, uncond ML = 47.3717, cond ML = 47.3716 pll = -0.000137868 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00855192, uncond ML = 42.3983, cond ML = 43.3587 pll = 0.96045 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00611674, uncond ML = 40.9151, cond ML = 41.3842 pll = 0.469097 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.91731e-10, uncond ML = 45.5326, cond ML = 45.5323 pll = -0.00034889 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.06635e-08, uncond ML = 44.7794, cond ML = 44.7793 pll = -0.000131648 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00137892, uncond ML = 45.1975, cond ML = 45.2368 pll = 0.039244 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00676964, uncond ML = 43.7983, cond ML = 44.2632 pll = 0.464955 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00904508, uncond ML = 42.5966, cond ML = 43.961 pll = 1.36441 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.77796e-06, uncond ML = 42.77, cond ML = 42.7696 pll = -0.00030996 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000817898, uncond ML = 46.2055, cond ML = 46.2158 pll = 0.0103165 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.76067e-09, uncond ML = 41.8064, cond ML = 41.8063 pll = -9.00928e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.15528e-08, uncond ML = 46.9946, cond ML = 46.9943 pll = -0.000335124 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.00853e-06, uncond ML = 42.5893, cond ML = 42.5889 pll = -0.000406948 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00203495, uncond ML = 43.4048, cond ML = 43.453 pll = 0.0481816 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00353186, uncond ML = 43.4851, cond ML = 43.7463 pll = 0.261206 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.000969036, uncond ML = 46.235, cond ML = 46.3205 pll = 0.0855542 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.09135e-08, uncond ML = 46.4486, cond ML = 46.4483 pll = -0.000366978 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00486672, uncond ML = 43.8969, cond ML = 44.2275 pll = 0.330574 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00290666, uncond ML = 41.9695, cond ML = 42.1229 pll = 0.153345 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00280758, uncond ML = 42.7832, cond ML = 43.1312 pll = 0.348027 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.0110525, uncond ML = 41.3092, cond ML = 44.9101 pll = 3.60083 time (create/fit1/2) 0 , 0 , 0.02
+EvaluateProfileLikelihood - mu hat = 4.61252e-05, uncond ML = 42.7485, cond ML = 42.7483 pll = -0.000132391 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.31772e-08, uncond ML = 42.2932, cond ML = 42.2932 pll = -6.32793e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00323117, uncond ML = 43.9541, cond ML = 44.0961 pll = 0.142084 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00250827, uncond ML = 41.4894, cond ML = 41.5973 pll = 0.107849 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.22839e-20, uncond ML = 41.7725, cond ML = 41.7725 pll = -1.68834e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.004228, uncond ML = 42.7484, cond ML = 43.1536 pll = 0.40523 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.92497e-09, uncond ML = 41.9176, cond ML = 41.9172 pll = -0.000449798 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.31686e-13, uncond ML = 42.7284, cond ML = 42.7284 pll = -2.34234e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.14341e-10, uncond ML = 43.7717, cond ML = 43.7716 pll = -0.000102486 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.50426e-08, uncond ML = 45.2611, cond ML = 45.2608 pll = -0.000338967 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00469735, uncond ML = 43.6058, cond ML = 43.8437 pll = 0.23781 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 6.37596e-09, uncond ML = 47.0492, cond ML = 47.0491 pll = -9.7651e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00205068, uncond ML = 41.72, cond ML = 41.8172 pll = 0.0971331 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.38867e-05, uncond ML = 44.3674, cond ML = 44.3687 pll = 0.0012825 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0061666, uncond ML = 42.0902, cond ML = 42.9085 pll = 0.818285 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0039758, uncond ML = 47.7108, cond ML = 47.8601 pll = 0.149262 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.40413e-08, uncond ML = 41.5039, cond ML = 41.5034 pll = -0.000463722 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00650043, uncond ML = 42.5824, cond ML = 43.0607 pll = 0.478283 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00321109, uncond ML = 40.972, cond ML = 41.3625 pll = 0.390447 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.24394e-09, uncond ML = 42.4287, cond ML = 42.4282 pll = -0.00052531 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00261155, uncond ML = 45.7617, cond ML = 45.8178 pll = 0.056058 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.0979e-07, uncond ML = 41.5518, cond ML = 41.5517 pll = -0.0001104 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00122228, uncond ML = 43.929, cond ML = 44.0049 pll = 0.0758886 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.642e-08, uncond ML = 45.0346, cond ML = 45.0345 pll = -0.000146599 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.42251e-09, uncond ML = 42.8007, cond ML = 42.8006 pll = -0.000100722 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.4969e-08, uncond ML = 46.0334, cond ML = 46.0333 pll = -9.75183e-05 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 1.94076e-07, uncond ML = 43.6417, cond ML = 43.6416 pll = -0.000100006 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.81215e-06, uncond ML = 43.1943, cond ML = 43.1941 pll = -0.000172279 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 5.43776e-08, uncond ML = 43.2945, cond ML = 43.2944 pll = -0.000119331 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0118545, uncond ML = 46.5761, cond ML = 48.4948 pll = 1.91868 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.30455e-06, uncond ML = 45.5787, cond ML = 45.5787 pll = -4.75046e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 6.92546e-07, uncond ML = 43.8778, cond ML = 43.8775 pll = -0.00029052 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0106933, uncond ML = 47.1391, cond ML = 48.5841 pll = 1.44498 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00386688, uncond ML = 43.8118, cond ML = 43.9612 pll = 0.149363 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 7.33684e-05, uncond ML = 45.9358, cond ML = 45.9358 pll = 2.37992e-05 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 1.06873e-08, uncond ML = 46.6997, cond ML = 46.6997 pll = -8.82067e-07 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 6.63927e-14, uncond ML = 42.4952, cond ML = 42.4952 pll = -2.65181e-08 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.55606e-08, uncond ML = 45.0999, cond ML = 45.0999 pll = -2.87437e-06 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.14106e-09, uncond ML = 39.4889, cond ML = 39.4887 pll = -0.000233242 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0035673, uncond ML = 44.0676, cond ML = 44.2981 pll = 0.23056 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 5.17953e-11, uncond ML = 43.7899, cond ML = 43.7899 pll = -1.31059e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000771011, uncond ML = 43.8652, cond ML = 43.8747 pll = 0.00945682 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000440846, uncond ML = 42.207, cond ML = 42.2101 pll = 0.00314556 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00347642, uncond ML = 44.6017, cond ML = 44.8881 pll = 0.286459 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.22302e-08, uncond ML = 41.0109, cond ML = 41.0109 pll = -5.28054e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.41341e-09, uncond ML = 42.5578, cond ML = 42.5571 pll = -0.000697551 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.95243e-11, uncond ML = 45.7193, cond ML = 45.7193 pll = -2.27896e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00407241, uncond ML = 41.9853, cond ML = 42.2468 pll = 0.26149 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.91682e-08, uncond ML = 42.1185, cond ML = 42.1183 pll = -0.000211632 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.63921e-09, uncond ML = 42.7332, cond ML = 42.7328 pll = -0.000343234 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00194984, uncond ML = 44.2165, cond ML = 44.2829 pll = 0.0664049 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00227315, uncond ML = 40.8577, cond ML = 40.9394 pll = 0.0816882 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000245337, uncond ML = 42.8242, cond ML = 42.8239 pll = -0.000356785 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00791095, uncond ML = 41.7805, cond ML = 42.5331 pll = 0.752542 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.89014e-08, uncond ML = 42.549, cond ML = 42.5488 pll = -0.000272692 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00359359, uncond ML = 41.6474, cond ML = 42.1293 pll = 0.481839 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.73013e-09, uncond ML = 44.0431, cond ML = 44.0429 pll = -0.000244317 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.16106e-08, uncond ML = 43.6027, cond ML = 43.6027 pll = -7.84363e-05 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.000387755, uncond ML = 47.9398, cond ML = 47.9403 pll = 0.000504275 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00468448, uncond ML = 45.361, cond ML = 45.5511 pll = 0.190102 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.19109e-12, uncond ML = 42.6887, cond ML = 42.6887 pll = -1.10569e-07 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.41877e-11, uncond ML = 42.2621, cond ML = 42.2621 pll = -2.39065e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00670369, uncond ML = 40.0528, cond ML = 41.29 pll = 1.23725 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.0018047, uncond ML = 42.1134, cond ML = 42.2458 pll = 0.132372 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0110168, uncond ML = 43.3757, cond ML = 45.502 pll = 2.12628 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.68281e-08, uncond ML = 45.9894, cond ML = 45.9892 pll = -0.000145076 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.87369e-08, uncond ML = 40.8312, cond ML = 40.8309 pll = -0.000299163 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00103996, uncond ML = 45.6066, cond ML = 45.6292 pll = 0.0226103 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00648769, uncond ML = 40.8288, cond ML = 41.8497 pll = 1.02096 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00812808, uncond ML = 44.2489, cond ML = 45.1686 pll = 0.919751 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.81568e-08, uncond ML = 43.6093, cond ML = 43.6089 pll = -0.00032936 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000100955, uncond ML = 44.6398, cond ML = 44.6405 pll = 0.000655538 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.9977e-07, uncond ML = 44.6982, cond ML = 44.6981 pll = -0.000111496 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00396509, uncond ML = 43.7236, cond ML = 43.998 pll = 0.274414 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000204085, uncond ML = 43.3788, cond ML = 43.3794 pll = 0.00065056 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.85227e-09, uncond ML = 46.2279, cond ML = 46.2275 pll = -0.000434823 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.19168e-09, uncond ML = 46.5245, cond ML = 46.5244 pll = -9.62495e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.88544e-08, uncond ML = 43.746, cond ML = 43.7459 pll = -3.57445e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.07904e-07, uncond ML = 53.1616, cond ML = 53.1614 pll = -0.00020907 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00162672, uncond ML = 46.8787, cond ML = 47.0673 pll = 0.188608 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.2936e-07, uncond ML = 43.671, cond ML = 43.6702 pll = -0.000799148 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0, uncond ML = 43.22, cond ML = 43.22 pll = -3.31194e-05 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 4.47119e-11, uncond ML = 43.1605, cond ML = 43.1603 pll = -0.000208014 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0112372, uncond ML = 47.1917, cond ML = 48.4879 pll = 1.2962 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00340889, uncond ML = 40.2684, cond ML = 40.6894 pll = 0.42103 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.53865e-12, uncond ML = 44.4329, cond ML = 44.4329 pll = -1.9239e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.65987e-10, uncond ML = 42.3617, cond ML = 42.3616 pll = -8.53342e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00319083, uncond ML = 44.947, cond ML = 45.1396 pll = 0.192565 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00295902, uncond ML = 43.2429, cond ML = 43.5822 pll = 0.339234 time (create/fit1/2) 0 , 0.02 , 0
+EvaluateProfileLikelihood - mu hat = 7.02754e-10, uncond ML = 44.375, cond ML = 44.3749 pll = -6.89459e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00113175, uncond ML = 45.1734, cond ML = 45.2021 pll = 0.0286745 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00949454, uncond ML = 44.5036, cond ML = 45.8262 pll = 1.32258 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.33032e-08, uncond ML = 42.4686, cond ML = 42.4685 pll = -0.000131546 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.35709e-06, uncond ML = 41.7922, cond ML = 41.792 pll = -0.000219375 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.00035e-08, uncond ML = 44.4551, cond ML = 44.4547 pll = -0.000375429 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.77105e-10, uncond ML = 44.6035, cond ML = 44.6035 pll = -1.49974e-07 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000109693, uncond ML = 50.34, cond ML = 50.3398 pll = -0.000117072 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00500754, uncond ML = 41.2219, cond ML = 41.851 pll = 0.629085 time (create/fit1/2) 0 , 0.02 , 0
+EvaluateProfileLikelihood - mu hat = 0.00167855, uncond ML = 42.6438, cond ML = 42.6788 pll = 0.0349786 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.64462e-07, uncond ML = 49.7123, cond ML = 49.7119 pll = -0.000423454 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.78981e-09, uncond ML = 43.6004, cond ML = 43.6001 pll = -0.000363811 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.17292e-07, uncond ML = 41.1368, cond ML = 41.1366 pll = -0.000190116 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00418548, uncond ML = 44.3292, cond ML = 45.004 pll = 0.674794 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 3.47533e-06, uncond ML = 43.0733, cond ML = 43.0732 pll = -0.000149135 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0110515, uncond ML = 44.6802, cond ML = 46.1273 pll = 1.44703 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00798618, uncond ML = 45.0602, cond ML = 46.1959 pll = 1.13566 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00713099, uncond ML = 47.2774, cond ML = 48.0687 pll = 0.791229 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.48534e-07, uncond ML = 45.9186, cond ML = 45.9185 pll = -0.000122179 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00368909, uncond ML = 41.9063, cond ML = 42.1691 pll = 0.262893 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00652819, uncond ML = 43.6394, cond ML = 44.1667 pll = 0.527338 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.30118e-09, uncond ML = 47.8827, cond ML = 47.8821 pll = -0.000535413 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.89964e-06, uncond ML = 42.0005, cond ML = 42.0003 pll = -0.000207014 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.73375e-07, uncond ML = 45.19, cond ML = 45.1898 pll = -0.000189527 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.85095e-13, uncond ML = 47.5821, cond ML = 47.5818 pll = -0.000340665 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.12664e-08, uncond ML = 41.6074, cond ML = 41.607 pll = -0.000367158 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.56004e-08, uncond ML = 39.0437, cond ML = 39.0437 pll = -8.44859e-06 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 4.23497e-09, uncond ML = 43.3323, cond ML = 43.3323 pll = -3.43963e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00247085, uncond ML = 47.1612, cond ML = 47.2699 pll = 0.108676 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.33891e-10, uncond ML = 46.0663, cond ML = 46.0661 pll = -0.00020949 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.49586e-08, uncond ML = 41.6204, cond ML = 41.6196 pll = -0.000820555 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000104723, uncond ML = 41.9241, cond ML = 41.9236 pll = -0.000427485 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.0038467, uncond ML = 40.4019, cond ML = 41.1394 pll = 0.737527 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00626691, uncond ML = 44.4247, cond ML = 44.7474 pll = 0.322683 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 2.86102e-08, uncond ML = 43.2917, cond ML = 43.2917 pll = -1.04103e-05 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.000395855, uncond ML = 46.177, cond ML = 46.1781 pll = 0.00104712 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00250908, uncond ML = 42.3699, cond ML = 42.5451 pll = 0.17519 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.000433103, uncond ML = 41.646, cond ML = 41.6517 pll = 0.00578301 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00340853, uncond ML = 43.3753, cond ML = 43.6324 pll = 0.257055 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00610598, uncond ML = 40.1775, cond ML = 40.9205 pll = 0.74299 time (create/fit1/2) 0 , 0 , 0.1
+EvaluateProfileLikelihood - mu hat = 0.00223472, uncond ML = 44.7992, cond ML = 44.8901 pll = 0.0909102 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00349414, uncond ML = 42.1002, cond ML = 42.5824 pll = 0.482192 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.65273e-08, uncond ML = 42.9161, cond ML = 42.9158 pll = -0.000293229 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.36314e-07, uncond ML = 44.4674, cond ML = 44.4672 pll = -0.000262576 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.0018596, uncond ML = 41.3784, cond ML = 41.6194 pll = 0.24101 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 6.91464e-10, uncond ML = 39.9274, cond ML = 39.9274 pll = -3.83599e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.82506e-09, uncond ML = 44.2879, cond ML = 44.2876 pll = -0.000227419 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.27653e-08, uncond ML = 45.2353, cond ML = 45.235 pll = -0.000292149 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00264027, uncond ML = 43.0439, cond ML = 43.2318 pll = 0.18784 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.10832e-11, uncond ML = 46.9228, cond ML = 46.9227 pll = -1.73599e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.18329e-14, uncond ML = 43.5608, cond ML = 43.5607 pll = -5.12452e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00544891, uncond ML = 43.4872, cond ML = 43.9929 pll = 0.505733 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00854148, uncond ML = 38.7777, cond ML = 42.2443 pll = 3.46665 time (create/fit1/2) 0 , 0.01 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00531021, uncond ML = 43.7967, cond ML = 44.2626 pll = 0.465906 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.61931e-06, uncond ML = 48.0697, cond ML = 48.0696 pll = -0.000131756 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 3.31967e-10, uncond ML = 47.3206, cond ML = 47.3198 pll = -0.000804214 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.61594e-09, uncond ML = 41.4965, cond ML = 41.4964 pll = -9.19925e-05 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00417848, uncond ML = 48.3313, cond ML = 48.5971 pll = 0.265784 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.50461e-10, uncond ML = 43.6327, cond ML = 43.6327 pll = -7.56395e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00723465, uncond ML = 41.7324, cond ML = 42.6649 pll = 0.932587 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00412933, uncond ML = 43.7784, cond ML = 43.9292 pll = 0.150818 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00833747, uncond ML = 41.411, cond ML = 42.0648 pll = 0.653842 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 8.79755e-08, uncond ML = 44.7333, cond ML = 44.7328 pll = -0.00050915 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.77998e-10, uncond ML = 43.2654, cond ML = 43.2653 pll = -0.000155065 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00127558, uncond ML = 41.1213, cond ML = 41.1552 pll = 0.0339146 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.59651e-09, uncond ML = 41.453, cond ML = 41.453 pll = -9.86267e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.23474e-09, uncond ML = 44.1684, cond ML = 44.1683 pll = -0.000104955 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00129455, uncond ML = 40.7487, cond ML = 40.7875 pll = 0.0387478 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 9.70577e-13, uncond ML = 46.3206, cond ML = 46.3206 pll = -9.24875e-06 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 1.81712e-05, uncond ML = 42.5261, cond ML = 42.5256 pll = -0.000511246 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.9977e-09, uncond ML = 41.9823, cond ML = 41.9823 pll = -2.048e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.0105126, uncond ML = 42.1959, cond ML = 43.3205 pll = 1.12453 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 1.42938e-12, uncond ML = 47.0011, cond ML = 47.0011 pll = -6.31367e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00757015, uncond ML = 41.808, cond ML = 42.6618 pll = 0.853837 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.003406, uncond ML = 41.0377, cond ML = 41.5997 pll = 0.562056 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.56539e-07, uncond ML = 45.1923, cond ML = 45.192 pll = -0.000324551 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 7.09202e-09, uncond ML = 41.642, cond ML = 41.6417 pll = -0.000251697 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00343276, uncond ML = 41.2036, cond ML = 41.572 pll = 0.368436 time (create/fit1/2) 0.01 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.53312e-08, uncond ML = 42.6691, cond ML = 42.669 pll = -0.000125247 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 8.96204e-05, uncond ML = 42.2668, cond ML = 42.2664 pll = -0.000463756 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.70997e-09, uncond ML = 44.7343, cond ML = 44.7341 pll = -0.000135651 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00117153, uncond ML = 46.2508, cond ML = 46.276 pll = 0.0251669 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00462883, uncond ML = 40.115, cond ML = 41.0095 pll = 0.894423 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.30245e-08, uncond ML = 42.414, cond ML = 42.4136 pll = -0.000409024 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.27386e-10, uncond ML = 48.1987, cond ML = 48.1987 pll = -2.48733e-07 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 5.60363e-14, uncond ML = 43.433, cond ML = 43.4326 pll = -0.000467105 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.13454e-08, uncond ML = 44.9568, cond ML = 44.9562 pll = -0.000614344 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00646451, uncond ML = 46.2291, cond ML = 47.0806 pll = 0.851463 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 3.72765e-07, uncond ML = 40.7065, cond ML = 40.7063 pll = -0.000180114 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.0033698, uncond ML = 47.2831, cond ML = 47.4172 pll = 0.134113 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.000600874, uncond ML = 41.2424, cond ML = 41.2791 pll = 0.0366217 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 2.07075e-09, uncond ML = 44.8401, cond ML = 44.8399 pll = -0.000179689 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.00128512, uncond ML = 41.4132, cond ML = 41.4889 pll = 0.0757162 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.15903e-07, uncond ML = 43.0285, cond ML = 43.0284 pll = -0.00013517 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00710095, uncond ML = 45.4604, cond ML = 46.2586 pll = 0.798214 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00348821, uncond ML = 42.9235, cond ML = 43.082 pll = 0.158449 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00821234, uncond ML = 47.1591, cond ML = 48.3189 pll = 1.15987 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 2.08686e-10, uncond ML = 45.4691, cond ML = 45.4686 pll = -0.000505581 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00261448, uncond ML = 44.3026, cond ML = 44.4062 pll = 0.103564 time (create/fit1/2) 0 , 0 , 0.01
+EvaluateProfileLikelihood - mu hat = 0.00133553, uncond ML = 42.6428, cond ML = 42.6834 pll = 0.040598 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 4.85239e-09, uncond ML = 41.0075, cond ML = 41.0074 pll = -7.37268e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00846522, uncond ML = 41.1327, cond ML = 42.6396 pll = 1.50683 time (create/fit1/2) 0 , 0 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+EvaluateProfileLikelihood - mu hat = 0.00913, uncond ML = 40.3747, cond ML = 43.4304 pll = 3.05573 time (create/fit1/2) 0 , 0.01 , 0
+EvaluateProfileLikelihood - mu hat = 0.000232193, uncond ML = 42.2704, cond ML = 42.2709 pll = 0.000478095 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 6.62842e-08, uncond ML = 44.9934, cond ML = 44.9934 pll = -1.13747e-05 time (create/fit1/2) 0 , 0 , 0
+EvaluateProfileLikelihood - mu hat = 0.00123524, uncond ML = 42.6494, cond ML = 42.6745 pll = 0.0251341 time (create/fit1/2) 0 , 0 , 0.01
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve
+EvaluateProfileLikelihood - mu hat = 0.00650681, uncond ML = 42.952, cond ML = 43.9031 pll = 0.951103 time (create/fit1/2) 0 , 0.01 , 0
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with improve

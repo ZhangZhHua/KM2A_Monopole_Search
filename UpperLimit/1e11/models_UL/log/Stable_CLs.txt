@@ -1,0 +1,944 @@
+
+Processing Stable_CLs.C...
+
+>>> Starting Limit Calculation (Bulletproof Toy MC + PLR Method)...
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- Silent clipping of values to range in `RooRealVar::setVal()` enabled.
+[#1] INFO:InputArguments -- HypoTestInverter ---- Input models: 
+		 using as S+B (null) model     : ModelConfig
+		 using as B (alternate) model  : B_only_model
+
+[#1] INFO:Eval -- HypoTestInverter::GetInterval - run a fixed scan
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.98703e-10
+Snapshot:                
+  1) 0x5629b3b58830 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.98703e-10
+Snapshot:                
+  1) 0x5629b3b5ac70 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 0
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+    ----> Doing a re-scan first
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+[#0] PROGRESS:Eval -- P values for  mu =  0
+	CLs      = 1.00005 +/- 0.000165855
+	CLb      = 0.9998 +/- 0.000141407
+	CLsplusb = 0.99985 +/- 8.6596e-05
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.00103448
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.9898e-10
+Snapshot:                
+  1) 0x5629b4e6b1e0 RooRealVar:: mu = 0.00103448 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.9898e-10
+Snapshot:                
+  1) 0x5629b4a2b100 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 0.409033
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Eval -- P values for  mu =  0.00103448
+	CLs      = 0.609375 +/- 0.102505
+	CLb      = 0.0064 +/- 0.000797436
+	CLsplusb = 0.0039 +/- 0.000440726
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.00206897
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99257e-10
+Snapshot:                
+  1) 0x5629b4d196d0 RooRealVar:: mu = 0.00206897 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99257e-10
+Snapshot:                
+  1) 0x5629b4e78970 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 0.818882
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+    ----> Doing a re-scan first
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+[#0] PROGRESS:Eval -- P values for  mu =  0.00206897
+	CLs      = 0.469231 +/- 0.0834493
+	CLb      = 0.0065 +/- 0.000803601
+	CLsplusb = 0.00305 +/- 0.000389916
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.00310345
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99534e-10
+Snapshot:                
+  1) 0x5629b4e97080 RooRealVar:: mu = 0.00310345 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99534e-10
+Snapshot:                
+  1) 0x5629b4efb420 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 1.2277
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Eval -- P values for  mu =  0.00310345
+	CLs      = 0.340909 +/- 0.0657731
+	CLb      = 0.0066 +/- 0.000809718
+	CLsplusb = 0.00225 +/- 0.000335033
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.00413793
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99811e-10
+Snapshot:                
+  1) 0x5629b4e544d0 RooRealVar:: mu = 0.00413793 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 7.99811e-10
+Snapshot:                
+  1) 0x5629b4e63950 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 1.63754
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+    ----> Doing a re-scan first
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Eval -- P values for  mu =  0.00413793
+	CLs      = 0.183824 +/- 0.042936
+	CLb      = 0.0068 +/- 0.000821813
+	CLsplusb = 0.00125 +/- 0.000249844
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.00517241
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 8.00088e-10
+Snapshot:                
+  1) 0x5629b4d0f1c0 RooRealVar:: mu = 0.00517241 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 8.00088e-10
+Snapshot:                
+  1) 0x5629b4dfdfb0 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 2.0466
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 7500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 8000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 9000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 10000
+[#0] PROGRESS:Eval -- P values for  mu =  0.00517241
+	CLs      = 0.119718 +/- 0.0322925
+	CLb      = 0.0071 +/- 0.000839618
+	CLsplusb = 0.00085 +/- 0.000206068
+
+[#1] INFO:ObjectHandling -- RooWorkspace::saveSnapshot(combined) replacing previous snapshot with name ModelConfig__snapshot
+[#0] PROGRESS:Eval -- Running for mu = 0.0062069
+
+=== Using the following for ModelConfig ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 8.00365e-10
+Snapshot:                
+  1) 0x5629b4e29330 RooRealVar:: mu = 0.0062069 +/- 0  L(0 - 0.05)  "mu"
+
+
+=== Using the following for B_only_model ===
+Observables:             RooArgSet:: = (obs_x_single_channel,channelCat)
+Parameters of Interest:  RooArgSet:: = (mu)
+Nuisance Parameters:     RooArgSet:: = (Lumi,alpha_energy_scale_sys,alpha_horandel_sys,alpha_model_shape_sys,alpha_template_stability_sys,gamma_stat_single_channel_bin_1,gamma_stat_single_channel_bin_2,gamma_stat_single_channel_bin_3,gamma_stat_single_channel_bin_4,gamma_stat_single_channel_bin_5,gamma_stat_single_channel_bin_6,gamma_stat_single_channel_bin_7,gamma_stat_single_channel_bin_8,gamma_stat_single_channel_bin_9,mu_bkg)
+Global Observables:      RooArgSet:: = (nominalLumi,nom_alpha_energy_scale_sys,nom_alpha_template_stability_sys,nom_alpha_model_shape_sys,nom_alpha_horandel_sys,nom_gamma_stat_single_channel_bin_0,nom_gamma_stat_single_channel_bin_1,nom_gamma_stat_single_channel_bin_2,nom_gamma_stat_single_channel_bin_3,nom_gamma_stat_single_channel_bin_4,nom_gamma_stat_single_channel_bin_5,nom_gamma_stat_single_channel_bin_6,nom_gamma_stat_single_channel_bin_7,nom_gamma_stat_single_channel_bin_8,nom_gamma_stat_single_channel_bin_9)
+PDF:                     RooSimultaneous::simPdf[ indexCat=channelCat single_channel=model_single_channel ] = 8.00365e-10
+Snapshot:                
+  1) 0x5629b4e47500 RooRealVar:: mu = 0 +/- 0  L(0 - 0.05)  "mu"
+
+[#0] PROGRESS:Generation -- Test Statistic on data: 2.45448
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Null.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Null.
+[#0] PROGRESS:Generation -- generated toys: 500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 2500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 3500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 4000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 5000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 6000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 6500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 7500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 8500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 9500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 10000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 10500 / 20000
+[#0] PROGRESS:Generation -- generated toys: 11000 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> trying with strategy = 1
+    ----> Doing a re-scan first
+    ----> trying with improve
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 11500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 12000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 12500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 13000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 13500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 14500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 15000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 15500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 16000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 16500 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 17500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 18000 / 20000
+[#0] PROGRESS:Generation -- generated toys: 18500 / 20000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19000 / 20000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 19500 / 20000
+[#1] INFO:InputArguments -- Profiling conditional MLEs for Alt.
+[#1] INFO:InputArguments -- Using a ToyMCSampler. Now configuring for Alt.
+[#0] PROGRESS:Generation -- generated toys: 500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 1000 / 10000
+[#0] PROGRESS:Generation -- generated toys: 1500 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2000 / 10000
+    ----> Doing a re-scan first
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 2500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 3000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 3500 / 10000
+[#0] PROGRESS:Generation -- generated toys: 4000 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 4500 / 10000
+    ----> Doing a re-scan first
+[#0] PROGRESS:Generation -- generated toys: 5000 / 10000
+    ----> Doing a re-scan first

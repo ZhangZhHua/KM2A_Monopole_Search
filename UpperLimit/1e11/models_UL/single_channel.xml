@@ -1,0 +1,23 @@
+<!DOCTYPE Channel SYSTEM "HistFactorySchema.dtd">
+
+<Channel Name="single_channel" InputFile="inputs_for_roostats.root">
+  
+  <Data HistoName="h_data" />
+
+  <StatErrorConfig RelErrorThreshold="0.1" ConstraintType="Poisson" />
+
+  <Sample Name="background" HistoName="h_bkg_nom" NormalizeByTheory="True">
+    <StatError Activate="True" />
+    <NormFactor Name="mu_bkg" Val="1.0" Low="0.0" High="5.0" />
+    <OverallSys Name="models_Ruecut_yield_sys" Low="0.9705" High="1.0288"/>
+    <OverallSys Name="spectrum_yield_sys" Low="0.7807" High="1.2678"/>
+    <HistoSys Name="energy_scale_sys" HistoNameLow="h_bkg_recE_down" HistoNameHigh="h_bkg_recE_up"/>
+    <HistoSys Name="template_stability_sys" HistoNameLow="h_bkg_rue_down" HistoNameHigh="h_bkg_rue_up"/>
+    <HistoSys Name="model_shape_sys" HistoNameLow="h_bkg_model_lo" HistoNameHigh="h_bkg_model_hi"/>
+  </Sample>
+
+  <Sample Name="signal" HistoName="h_sig_nom" NormalizeByTheory="True">
+    <NormFactor Name="mu" Val="1.0" Low="0.0" High="20.0" />
+  </Sample>
+
+</Channel>

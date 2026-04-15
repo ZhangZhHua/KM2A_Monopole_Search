@@ -1,0 +1,57 @@
+========================================================
+Processing: [2.5e13_4.0e13]
+  -> Runs: run001 run002
+  -> Limit: 200 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 2500 | Processing: 400000
+  RUN: run002 | Found: 2500 | Processing: 400000
+========================================================
+Processing: [4.0e13_6.4e13]
+  -> Runs: run001 run002
+  -> Limit: 200 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 2500 | Processing: 400000
+  RUN: run002 | Found: 2500 | Processing: 400000
+========================================================
+Processing: [6.4e13_1.0e14]
+  -> Runs: run001 run002
+  -> Limit: 500 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 5000 | Processing: 500000
+  RUN: run002 | Found: 5000 | Processing: 500000
+========================================================
+Processing: [1.0e14_1.6e14]
+  -> Runs: run001 run002
+  -> Limit: 1000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 5000 | Processing: 200000
+  RUN: run002 | Found: 5000 | Processing: 200000
+========================================================
+Processing: [1.6e14_2.5e14]
+  -> Runs: run001 run002
+  -> Limit: 1000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 100000
+  RUN: run002 | Found: 1000 | Processing: 100000
+========================================================
+Processing: [2.5e14_4.0e14]
+  -> Runs: run001 run002
+  -> Limit: 500 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 50000
+  RUN: run002 | Found: 1000 | Processing: 50000
+========================================================
+Processing: [4.0e14_6.4e14]
+  -> Runs: run001 run002
+  -> Limit: 500 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 50000
+  RUN: run002 | Found: 1000 | Processing: 50000
+========================================================
+Processing: [6.4e14_1.0e15]
+  -> Runs: run001 run002
+  -> Limit: 200 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 20000
+  RUN: run002 | Found: 1000 | Processing: 20000
+🎉 所有能量段任务处理完成。

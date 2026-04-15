@@ -1,0 +1,13 @@
+<!DOCTYPE Combination SYSTEM "HistFactorySchema.dtd">
+
+<Combination OutputFilePrefix="./results/MyMonopoleAnalysis" >
+
+  <Input>single_channel.xml</Input>
+
+  <Measurement Name="MyMeasurement" Lumi="1.0" LumiRelErr="0.0" >
+    
+    <POI>mu</POI>
+    
+    </Measurement>
+
+</Combination>

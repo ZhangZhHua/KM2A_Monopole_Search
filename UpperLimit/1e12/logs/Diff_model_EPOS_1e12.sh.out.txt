@@ -1,0 +1,79 @@
+========================================================
+Processing: [2.5e15_4.0e15]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 10000
+  RUN: run002 | Found: 1000 | Processing: 10000
+  RUN: run003 | Found: 1000 | Processing: 10000
+  RUN: run004 | Found: 1000 | Processing: 10000
+========================================================
+Processing: [4.0e15_6.4e15]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 10000
+  RUN: run002 | Found: 1000 | Processing: 10000
+  RUN: run003 | Found: 1000 | Processing: 10000
+  RUN: run004 | Found: 998 | Processing: 9980
+========================================================
+Processing: [6.4e15_1.0e16]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 10000
+  RUN: run002 | Found: 1000 | Processing: 10000
+  RUN: run003 | Found: 1000 | Processing: 10000
+  RUN: run004 | Found: 1000 | Processing: 10000
+========================================================
+Processing: [1.0e16_1.6e16]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 1000
+  RUN: run002 | Found: 1000 | Processing: 1000
+  RUN: run003 | Found: 1000 | Processing: 1000
+  RUN: run004 | Found: 1000 | Processing: 1000
+========================================================
+Processing: [1.6e16_2.5e16]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 1000
+  RUN: run002 | Found: 1000 | Processing: 1000
+  RUN: run003 | Found: 1000 | Processing: 1000
+  RUN: run004 | Found: 1000 | Processing: 1000
+========================================================
+Processing: [2.5e16_4.0e16]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 1000
+  RUN: run002 | Found: 1000 | Processing: 1000
+  RUN: run003 | Found: 1000 | Processing: 1000
+  RUN: run004 | Found: 1000 | Processing: 1000
+========================================================
+Processing: [4.0e16_6.4e16]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 1000
+  RUN: run002 | Found: 1000 | Processing: 1000
+  RUN: run003 | Found: 1000 | Processing: 1000
+  RUN: run004 | Found: 1000 | Processing: 1000
+========================================================
+Processing: [6.4e16_1.0e17]
+  -> Runs: run001 run002 run003 run004
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 1000 | Processing: 1000
+  RUN: run002 | Found: 998 | Processing: 998
+  RUN: run003 | Found: 1000 | Processing: 1000
+  RUN: run004 | Found: 998 | Processing: 998
+========================================================
+Processing: [1.0e17_5.0e17]
+  -> Runs: run001
+  -> Limit: 10000 (If > existing files, take ALL)
+========================================================
+  RUN: run001 | Found: 498 | Processing: 498
+🎉 所有高能段全量处理完成。

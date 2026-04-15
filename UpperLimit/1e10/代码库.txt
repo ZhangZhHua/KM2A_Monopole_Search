@@ -1,0 +1,598 @@
+import numpy as np
+import json
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+
+from scipy.stats import gaussian_kde
+
+def get_kde_smoothed_hist(df, score_col, weight_col, e_min, e_max, rue_cut, 
+                          bins, bandwidth=0.15):
+    """
+    使用 KDE (核密度估计) 生成平滑的直方图 (类似 RooKeysPdf)。
+    
+    Args:
+        bandwidth: 平滑系数 (bw_method)。
+                   值越小(e.g. 0.05)越保留细节但可能有噪点；
+                   值越大(e.g. 0.3)越平滑但可能抹平物理特征。
+                   推荐 0.1 - 0.2。
+    """
+    # 1. 筛选数据 (获取 Raw Data)
+    cond = (df['recE'] > e_min) & (df['recE'] < e_max) & \
+           (df['rho40'] > CUT_RHO_MIN) & \
+           (df['R_ue'] < rue_cut)
+    
+    df_cut = df[cond]
+    
+    # 2. 边界检查
+    if len(df_cut) < 10: 
+        # 如果统计量太少，KDE 会报错，回退到普通直方图或返回极小值
+        print(f"[Warning] Not enough stats for KDE (N={len(df_cut)}). Using flat fallback.")
+        return np.full(len(bins)-1, 1e-12)
+
+    scores = df_cut[score_col].values
+    weights = df_cut[weight_col].values
+    
+    # 3. 构建 KDE 模型
+    try:
+        kde = gaussian_kde(scores, weights=weights, bw_method=bandwidth)
+    except Exception as e:
+        print(f"[Error] KDE failed: {e}. Using flat fallback.")
+        return np.full(len(bins)-1, 1e-12)
+        
+    # 4. 在 Bin 中心采样 (Resampling)
+    bin_centers = (bins[:-1] + bins[1:]) / 2
+    bin_widths = bins[1:] - bins[:-1]
+    
+    # kde(x) 返回概率密度 (pdf)，乘以宽度得到概率
+    smoothed_probs = kde(bin_centers) * bin_widths
+    
+    # 5. 关键：重归一化 (Yield Restoration)
+    # KDE 算出来的是归一化概率，必须乘回原始的总权重 (Yield)
+    # 同时这步也修正了 KDE 在边界 [0,1] 外的泄漏问题
+    total_yield = np.sum(weights)
+    current_sum = np.sum(smoothed_probs)
+    
+    if current_sum > 0:
+        smoothed_counts = smoothed_probs / current_sum * total_yield
+    else:
+        smoothed_counts = smoothed_probs
+        
+    return np.maximum(smoothed_counts, 1e-12)
+# ==========================================
+# 6. Calculating Cut Systematics (Corrected Logic)
+# ==========================================
+print("\n>>> Step E: Calculating Cut Systematics (recE & Rue)...")
+# -------------------------------------------------
+# 0. Preparation: Score Full Datasets if needed
+# -------------------------------------------------
+if 'mlp_score' not in pr_df_large.columns:
+    print("Scoring full background dataset...")
+    pr_df_large['mlp_score'] = manager.predict_ensemble(pr_df_large)
+
+if 'mlp_score' not in mn_df_large.columns:
+    print("Scoring full signal dataset...")
+    mn_df_large['mlp_score'] = manager.predict_ensemble(mn_df_large)
+
+# -------------------------------------------------
+# 1. Define Function with "Validity Cut"
+# -------------------------------------------------
+# Constants
+BINS = np.linspace(0., 1, 25) 
+CUT_E_NOM = 1.90
+CUT_E_MAX = 2.1
+CUT_RHO_MIN = 0 
+# *** KEY FIX: The Template Validity Cut ***
+TEMPLATE_VALIDITY_CUT = TEMPLATE_CUT = -1.5 
+ANALYSIS_CUT = CUT_RUE_NOM= -3
+def get_counts_varied(df, score_col, weight_col, e_min, e_max, rue_threshold=-3.0,  use_loose_template=False):
+    """
+    Args:
+        rue_threshold: 想要测试的 Rue 阈值
+        use_loose_template: 如果为 True，强制忽略传入的 rue_threshold，
+                            改用 TEMPLATE_CUT (-1.5) 来获取高统计量的形状。
+    """
+    # 1. 基础物理 Cuts (能量 & rho40)
+    cond = (df['recE'] > e_min) & (df['recE'] < e_max) & \
+           (df['rho40'] > CUT_RHO_MIN)
+    
+    # 2. Rue Cut 逻辑 (核心修正)
+    if use_loose_template:
+        # 【背景专用】：强制使用宽松的模板阈值 (-1.5) 以保证统计量
+        # 我们假设：能量标度改变带来的"形状变化趋势"，在 -1.5 和 -2.6 是一样的
+        active_rue_cut = TEMPLATE_CUT
+    else:
+        # 【信号/数据专用】：使用真实的严格阈值 (-2.6 或变动值)
+        active_rue_cut = rue_threshold
+
+    cond = cond & (df['R_ue'] < active_rue_cut)
+    df_cut = df[cond]
+    
+    # 3. 获取数据
+    if len(df_cut) == 0:
+        return np.full(len(BINS)-1, 1e-12) # 防止空数组报错
+
+    scores = df_cut[score_col].values
+    weights = df_cut[weight_col].values
+    
+    # 4. 生成直方图 (不归一化，只看相对变化)
+    counts, _ = np.histogram(scores, bins=BINS, weights=weights,)
+    
+    return np.maximum(counts, 1e-12)
+
+def get_normalized_shape(df, score_col, weight_col, e_min, e_max, rue_cut):
+    """
+    获取指定 Rue Cut 下的归一化形状 (Sum = 1)
+    """
+    cond = (df['recE'] > e_min) & (df['recE'] < e_max) & \
+           (df['rho40'] > CUT_RHO_MIN) & \
+           (df['R_ue'] < rue_cut) # 使用传入的测试 Cut
+           
+    df_cut = df[cond]
+    
+    if len(df_cut) == 0:
+        return np.full(len(BINS)-1, 1e-12)
+
+    scores = df_cut[score_col].values
+    weights = df_cut[weight_col].values
+    
+    # 获取原始计数
+    counts, _ = np.histogram(scores, bins=BINS, weights=weights)
+    
+    # *** 关键步骤：归一化 ***
+    # 这消除了 Cut 变严导致的事例数减少，只保留“形状”变化
+    integral = np.sum(counts)
+    if integral > 0:
+        normed_shape = counts  / integral
+    else:
+        normed_shape = counts
+        
+    return np.maximum(normed_shape, 1e-12)
+
+# -------------------------------------------------
+# 2. Generate Variations
+# -------------------------------------------------
+UNC_E = 0.08    
+UNC_RUE = 0.05
+shift_up = np.log10(1 + UNC_E)
+shift_down = np.log10(1 - UNC_E)  
+print(f"Log-space Shift: +{shift_up:.4f} / {shift_down:.4f}")
+print(f"Generating Variations (Template Validity Cut < {TEMPLATE_VALIDITY_CUT} applied to Bkg)...")
+
+# --- A. Background (Proton) ---
+# Nominal (不变)
+bkg_nom_hist = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX,CUT_E_NOM, CUT_E_MAX, CUT_RUE_NOM, use_loose_template=True)
+# recE Variations (使用加法)
+# Scale Up: 能量标度偏高 -> Cut 阈值整体右移
+bkg_recE_up = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX,CUT_E_NOM + shift_up, CUT_E_MAX + shift_up, CUT_RUE_NOM,use_loose_template=True)
+# Scale Down: 能量标度偏低 -> Cut 阈值整体左移
+bkg_recE_down = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX,CUT_E_NOM + shift_down, CUT_E_MAX + shift_down, CUT_RUE_NOM,use_loose_template=True)
+# Rue Variations can be ignored
+# Important Check: Even for "Loose" (-2.55), it is still < -1.5, so validity holds.
+bkg_rue_tight = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX,CUT_E_NOM, CUT_E_MAX, CUT_RUE_NOM - UNC_RUE, use_loose_template=True)
+bkg_rue_loose = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX,CUT_E_NOM, CUT_E_MAX, CUT_RUE_NOM + UNC_RUE, use_loose_template=True)
+# 模板稳定性检查 (替代 Rue Cut Error)
+# 但我们可以算：如果模板定义从 -1.5 变成 -1.6，形状会变吗？这代表了"使用宽松模板带来的系统误差"
+# raw_bkg_rue_check_tight = get_counts_varied(pr_df_large, 'mlp_score', TARGET_FLUX, CUT_E_NOM, CUT_E_MAX, TEMPLATE_CUT - 0.1, use_loose_template=False)# 测试 -1.6
+shape_nom = get_normalized_shape(pr_df_large, 'mlp_score', TARGET_FLUX,  CUT_E_NOM, CUT_E_MAX, TEMPLATE_VALIDITY_CUT) # -1.5
+# Varied Template (-1.6, 更严一点，看形状是否畸变)
+# 这里我们测试一个合理的变动范围，比如 0.1
+shape_tight = get_normalized_shape(pr_df_large, 'mlp_score', TARGET_FLUX,  CUT_E_NOM, CUT_E_MAX, TEMPLATE_VALIDITY_CUT - 0.2) # -1.6
+
+# --- B. Signal (Monopole) ---# 同理修正信号
+sig_nom_hist = get_counts_varied(mn_df_large, 'mlp_score', 'weight',CUT_E_NOM, CUT_E_MAX, CUT_RUE_NOM)
+sig_recE_up = get_counts_varied(mn_df_large, 'mlp_score', 'weight',CUT_E_NOM + shift_up, CUT_E_MAX + shift_up, CUT_RUE_NOM)
+sig_recE_down = get_counts_varied(mn_df_large, 'mlp_score', 'weight', CUT_E_NOM + shift_down, CUT_E_MAX + shift_down, CUT_RUE_NOM)
+
+# -------------------------------------------------
+# 3. Validation
+# -------------------------------------------------
+print(f"\n[Systematics Check] Total Yields:")
+print(f"Bkg Nominal:   {bkg_nom_hist.sum():.2f}")
+print(f"Bkg recE Up:   {bkg_recE_up.sum():.2f}")
+print(f"Bkg recE Down: {bkg_recE_down.sum():.2f}")
+print(f"Bkg Rue Tight: {bkg_rue_tight.sum():.2f}")
+print(f"Bkg Rue Loose: {bkg_rue_loose.sum():.2f}")
+print(f"Sig recE Up:   {sig_recE_up.sum():.2e}")
+print(f"Sig recE Down: {sig_recE_down.sum():.2e}")
+
+def plot_sys_check(nom, up, down, title):
+    plt.figure(figsize=(7, 5))
+    x = (BINS[:-1] + BINS[1:]) / 2
+    plt.step(x, nom, where='mid', label='Nominal', color='black')
+    plt.step(x, up, where='mid', label='Variation 1', linestyle='--', color='red')
+    plt.step(x, down, where='mid', label='Variation 2', linestyle='--', color='blue')
+    # plt.yscale('log')
+    plt.title(title)
+    plt.legend()
+    plt.xlabel("Score")
+    plt.ylabel("Events / Year")
+    plt.show()
+
+# plot_sys_check(bkg_nom_hist, bkg_recE_up, bkg_recE_down, "Bkg Energy Scale Systematics")
+# plot_sys_check(bkg_nom_hist, bkg_rue_tight, bkg_rue_loose, "Bkg Rue Cut Systematics")
+# plot_sys_check(sig_nom_hist, sig_recE_up, sig_recE_down, "Sig Energy Scale Systematics")
+
+
+# =====================================================
+# 1. Configuration & Data Extraction
+# =====================================================
+
+
+def get_counts(df, score_col, weight_col, bins, scaled_num=100):
+    """
+    Helper to extract weighted histogram counts.
+    Ensures no bin has 0 content (replaces with small epsilon) for fit stability.
+    """
+    scores = df[score_col].values
+    weights = df[weight_col].values
+    
+    ratio_left = 1 - df[df[score_col] < bins[0]][weight_col].sum()/df[weight_col].sum()
+    counts, gaps = np.histogram(scores, bins=bins, weights=weights, density=True)
+    
+    # Scale to annual yield if weights are rates (events/sec)
+    # Assuming input weights are rates, multiply by seconds in a year
+    # IF your weights are already event counts, remove this factor.
+    # Based on previous context, weights seemed to be rates.
+    SECONDS_PER_YEAR = 1 
+    counts = counts * SECONDS_PER_YEAR * scaled_num * (bins[1] - bins[0]) * ratio_left
+    
+    # Avoid zero bins for statistical stability
+    counts = np.maximum(counts, 1e-6)
+    return counts
+
+print(">>> Extracting histograms for Limit Calculation...")
+
+CUT_SCORE = 0.
+n_exp = exp_final[exp_final['mlp_score'] > CUT_SCORE]['weight'].sum()
+n_bkg = bkg_train_final[bkg_train_final['mlp_score'] > CUT_SCORE][TARGET_FLUX].sum()
+n_sig = sig_train_final[sig_train_final['mlp_score'] > CUT_SCORE]['weight'].sum()
+
+TIMES= 365*86400
+num_dict={
+    'bkg_nom': n_exp*TIMES,
+    'bkg_ef': n_exp*TIMES,
+    'bkg_qf': n_exp*TIMES,
+    'sig_nom': n_sig*TIMES,
+    'obs_counts': n_exp*TIMES,
+}
+
+# 1. Nominal Background (QGSJET)
+bkg_nom = get_counts(bkg_train_final, 'mlp_score', TARGET_FLUX, BINS, scaled_num=num_dict['bkg_nom'])
+
+# 2. Systematic Variations (EPOS & QGSII)
+bkg_ef = get_counts(pseudo_ef_final, 'mlp_score', TARGET_FLUX, BINS, scaled_num=num_dict['bkg_ef'])
+bkg_qf = get_counts(pseudo_qf_final, 'mlp_score', TARGET_FLUX, BINS, scaled_num=num_dict['bkg_qf'])
+
+# 3. Signal
+sig_nom = get_counts(sig_train_final, 'mlp_score', 'weight', BINS, scaled_num=num_dict['sig_nom'])
+
+# 4. Observation (Experiment)
+obs_counts = get_counts(exp_final, 'mlp_score', 'weight', BINS, scaled_num=num_dict['obs_counts'])
+print(f"Observed Counts: {obs_counts.sum():.2f}")
+print(f'sig_nom: {sig_nom.sum():.2f}')
+
+
+
+# =====================================================
+# 处理 recE 系统误差的归一化
+# =====================================================
+print(">>> Integrating recE Systematics...")
+raw_bkg_sum = bkg_train_final[TARGET_FLUX].sum() # 近似原始总权重
+current_bkg_sum = np.sum(bkg_nom)
+scale_factor_bkg = current_bkg_sum / raw_bkg_sum
+
+# 1. 计算原始变化比例 (Shape + Rate)
+ratio_up_bkg = bkg_recE_up / (bkg_nom_hist + 1e-9) 
+ratio_down_bkg = bkg_recE_down / (bkg_nom_hist + 1e-9)
+# ratio_bkg_template_sys = raw_bkg_rue_check_tight / (bkg_nom_hist  + 1e-9)
+eps = 1e-9
+shape_ratio = shape_tight / (shape_nom + eps)
+# 2. 应用到当前缩放后的 bkg_nom
+bkg_recE_up_scaled = bkg_nom * ratio_up_bkg
+bkg_recE_down_scaled = bkg_nom * ratio_down_bkg
+
+bkg_rue_sys_up = bkg_nom * shape_ratio
+bkg_rue_sys_down = 2 * bkg_nom - bkg_rue_sys_up
+# 3. 对信号做同样处理 (如果有信号误差)
+ratio_up_sig = sig_recE_up / (sig_nom_hist + 1e-9)
+ratio_down_sig = sig_recE_down / (sig_nom_hist + 1e-9)
+sig_recE_up_scaled = sig_nom * ratio_up_sig
+sig_recE_down_scaled = sig_nom * ratio_down_sig
+
+def clean(h): return np.nan_to_num(h, nan=1e-12, posinf=1e-12, neginf=1e-12)
+bkg_recE_up_scaled = clean(bkg_recE_up_scaled)
+bkg_recE_down_scaled = clean(bkg_recE_down_scaled)
+bkg_rue_sys_up = clean(bkg_rue_sys_up)
+bkg_rue_sys_down = clean(bkg_rue_sys_down)
+sig_recE_up_scaled = clean(sig_recE_up_scaled)
+sig_recE_down_scaled = clean(sig_recE_down_scaled)
+
+# =====================================================
+# 2. Construct Envelope for Systematics
+# =====================================================
+# We take the envelope of all background models as the shape uncertainty
+raw_hi = np.max([bkg_nom, bkg_ef, bkg_qf], axis=0)
+raw_lo = np.min([bkg_nom, bkg_ef, bkg_qf], axis=0)
+grad_eps = bkg_nom * 1e-5 + 1e-5 # Ensure numeric stability (grad_eps) so hi > lo
+bkg_hi = np.maximum(raw_hi, bkg_nom + grad_eps)
+bkg_lo = np.minimum(raw_lo, bkg_nom - grad_eps)
+bkg_mean = (bkg_hi + bkg_lo) / 2
+centers = (BINS[:-1] + BINS[1:]) / 2
+
+
+
+def plot_formal_limit_inputs_refined(centers, bkg_nom, bkg_sys, sig_nom, sig_sys, obs_counts, out_path=None):
+    """
+    绘制符合学术发表标准的 Limit Inputs 及其 Ratio 图。
+    """
+    # 1. 设置学术风格 (Times New Roman + Inward Ticks + LaTeX Math)
+    plt.rcParams.update({
+        'font.family': 'serif',
+        "font.serif": ["Times New Roman", "DejaVu Serif", "serif"],
+        'font.size': 12,
+        'axes.labelsize': 16,
+        'axes.titlesize': 16,
+        'xtick.labelsize': 13,
+        'ytick.labelsize': 13,
+        'xtick.direction': 'in',
+        'ytick.direction': 'in',
+        'xtick.major.size': 6,
+        'ytick.major.size': 6,
+        'xtick.minor.size': 3,
+        'ytick.minor.size': 3,
+        'legend.fontsize': 11,
+        'legend.frameon': False,
+        'figure.figsize': (10, 9),
+        'axes.linewidth': 1.2,
+        "mathtext.fontset": "stix",
+        "xtick.top": True,
+        "ytick.right": True
+    })
+
+    # 创建带有 Ratio Plot 的子图布局
+    fig = plt.figure(dpi=300)
+    gs = plt.GridSpec(2, 1, height_ratios=[3.5, 1], hspace=0.06)
+    ax1 = fig.add_subplot(gs[0])
+    ax2 = fig.add_subplot(gs[1], sharex=ax1)
+
+    # ==========================================
+    # 上图：主分布图 (Main Distribution)
+    # ==========================================
+    
+    # 1. 背景模型系统误差带 (Model Shape Sys) - 灰色阴影
+    ax1.fill_between(centers, bkg_sys['lo'], bkg_sys['hi'], step='mid', 
+                     color='gray', alpha=0.3, label='Bkg Model Sys.', zorder=1)
+
+    # 2. 背景 Nominal - 黑色实线
+    ax1.step(centers, bkg_nom, where='mid', label='Expected Bkg', 
+             color='black', lw=2, zorder=2)
+
+    # 3. RecE 系统误差 - 蓝色虚线
+    ax1.step(centers, bkg_sys['recE_up'], where='mid', label=r'Bkg $E_{scale}$ Sys.', 
+             linestyle='--', color='#1f77b4', lw=1.5, zorder=2)
+    ax1.step(centers, bkg_sys['recE_down'], where='mid', 
+             linestyle='--', color='#1f77b4', lw=1.5, zorder=2)
+
+    # 4. Rue 系统误差 - 绿色点线
+    ax1.step(centers, bkg_sys['rue_up'], where='mid', label=r'Bkg $R_{ue}$ Template Sys.', 
+             linestyle=':', color='#2ca02c', lw=1.8, zorder=2)
+    ax1.step(centers, bkg_sys['rue_down'], where='mid', 
+             linestyle=':', color='#2ca02c', lw=1.8, zorder=2)
+
+    # 5. 信号 - 红色填充 + 轮廓
+    # 信号通常比较小，为了视觉清晰，使用填充
+    ax1.step(centers, sig_nom, where='mid', label='Signal (Nominal)', 
+             color='#d62728', lw=2, zorder=3)
+    # 可选：给信号也加上误差带
+    ax1.fill_between(centers, sig_sys['recE_down'], sig_sys['recE_up'], step='mid',
+                     color='#d62728', alpha=0.2, zorder=3)
+
+    # 6. 观测数据 - 黑点 + 误差棒
+    # 误差计算：如果 obs_counts 是原始计数，用 sqrt(N)；如果是归一化后的，这里只展示近似误差
+    yerr = np.sqrt(obs_counts)
+    mask = obs_counts > 0 # 过滤掉 0 计数的点，保持图面整洁
+    ax1.errorbar(centers[mask], obs_counts[mask], yerr=yerr[mask], fmt='o', 
+                 color='black', markersize=4, capsize=0, elinewidth=1.2, 
+                 label='Observed Data', zorder=10)
+
+    # --- 上图美化 ---
+    ax1.set_ylabel(r"Events / Year", labelpad=10)
+    # ax1.set_yscale('log')
+    ax1.grid(True, which='both', linestyle='--', alpha=0.3)
+    # 根据数据自动调整 ylim，防止 log 坐标下显示不全
+    ax1.set_ylim(bottom=max(1e-3, np.min(bkg_sys['lo'][bkg_sys['lo']>0])*0.1))
+    
+    # 优化图例：分两列显示
+    ax1.legend(loc='best', ncol=2)
+    plt.setp(ax1.get_xticklabels(), visible=False) # 隐藏 x 轴标签
+
+    # ==========================================
+    # 下图：多重比率图 (Multi-Ratio Plot)
+    # ==========================================
+    
+    # 分母：Nominal Background
+    denom = np.where(bkg_nom == 0, 1e-9, bkg_nom) # 避免除零
+
+    # 1. 绘制 Data / Bkg (黑点)
+    ratio_data = obs_counts / denom
+    ratio_err = np.sqrt(obs_counts) / denom
+    ax2.errorbar(centers[mask], ratio_data[mask], yerr=ratio_err[mask], fmt='o', 
+                 color='black', markersize=4, capsize=0, elinewidth=1.2, zorder=10)
+
+    # 2. 绘制基准线 (y=1)
+    ax2.axhline(1, color='gray', linestyle='-', linewidth=1)
+
+    # 3. 【新增】系统误差的相对幅度展示
+    # 这部分展示了各项误差相对于 Nominal 的偏离程度，方便审稿人判断哪项误差主导
+    
+    # A. Model Shape Sys Band (Gray)
+    ax2.fill_between(centers, bkg_sys['lo']/denom, bkg_sys['hi']/denom, step='mid', 
+                     color='gray', alpha=0.3, label='Model Sys.')
+    
+    # B. RecE Sys Lines (Blue Dashed)
+    ax2.step(centers, bkg_sys['recE_up']/denom, where='mid', linestyle='--', color='#1f77b4', lw=1.2)
+    ax2.step(centers, bkg_sys['recE_down']/denom, where='mid', linestyle='--', color='#1f77b4', lw=1.2)
+    
+    # C. Rue Sys Lines (Green Dotted)
+    ax2.step(centers, bkg_sys['rue_up']/denom, where='mid', linestyle=':', color='#2ca02c', lw=1.5)
+    ax2.step(centers, bkg_sys['rue_down']/denom, where='mid', linestyle=':', color='#2ca02c', lw=1.5)
+
+    # --- 下图美化 ---
+    ax2.set_xlabel(r"Classifier Score", labelpad=10)
+    ax2.set_ylabel("Ratio / Bkg", labelpad=10, fontsize=13)
+    
+    # 限制 Y 轴范围，聚焦于 1 附近 (例如 0.5 - 1.5)
+    ax2.set_ylim(0., 2)
+    
+    # 精细刻度
+    ax2.yaxis.set_major_locator(ticker.MultipleLocator(0.2))
+    ax2.yaxis.set_minor_locator(ticker.MultipleLocator(0.05))
+    ax2.grid(True, which='both', axis='y', linestyle='--', alpha=0.3)
+
+    # plt.tight_layout()
+    
+    if out_path:
+        print(f"Saving figure to {out_path}")
+        # plt.savefig(out_path, bbox_inches='tight', pad_inches=0.1)
+    plt.show()
+
+
+# ==========================================
+# 调用部分
+# ==========================================
+
+
+# 构造传入字典
+bkg_sys_dict = {
+    'hi': bkg_hi, 
+    'lo': bkg_lo, 
+    'recE_up': bkg_recE_up_scaled, 
+    'recE_down': bkg_recE_down_scaled, 
+    'rue_up': bkg_rue_sys_up, 
+    'rue_down': bkg_rue_sys_down
+}
+sig_sys_dict = {
+    'recE_up': sig_recE_up_scaled, 
+    'recE_down': sig_recE_down_scaled
+}
+
+plot_formal_limit_inputs_refined(
+    centers, 
+    bkg_nom, 
+    bkg_sys_dict, 
+    sig_nom, 
+    sig_sys_dict, 
+    obs_counts, 
+    out_path="/data/home/zzh/Filt_Event/Note_Writing/figures/ABCD_extend_small2large.pdf"
+)
+
+
+# =====================================================
+# 3. Build PyHF JSON Specification (Updated)
+# =====================================================
+spec = {
+    "channels": [
+        {
+            "name": "single_channel",
+            "samples": [
+                {
+                    "name": "background",
+                    "data": bkg_nom.tolist(), # 或者 bkg_nom.tolist()，看你是否想要 Asimov
+                    "modifiers": [
+                        # 1. Model Shape Uncertainty (EPOS/QGS Envelope)
+                        {
+                            "name": "model_shape_sys",
+                            "type": "histosys",
+                            "data": {
+                                "lo_data": bkg_lo.tolist(),
+                                "hi_data": bkg_hi.tolist()
+                            }
+                        },
+                        # 2. [新增] Energy Scale Uncertainty (recE)
+                        # 注意：Rue 误差被忽略了，所以只加这一个
+                        {
+                            "name": "energy_scale_sys",
+                            "type": "histosys",
+                            "data": {
+                                "lo_data": bkg_recE_down_scaled.tolist(),
+                                "hi_data": bkg_recE_up_scaled.tolist()
+                            }
+                        },
+                        # 3. 模板稳定性误差 (替代 Rue Cut Error)
+                        # 反映了 "如果我们用 -1.6 而不是 -1.5 做模板，结果会变多少"
+                        {
+                            "name": "template_stability_sys",
+                            "type": "histosys",
+                            "data": { "lo_data": bkg_rue_sys_down.tolist(), "hi_data": bkg_rue_sys_up.tolist() }
+                        },
+                        # 4. Free Floating Background Normalization
+                        {
+                            "name": "mu_bkg", 
+                            "type": "normfactor",
+                            "data": None
+                        }
+                    ]
+                },
+                {
+                    "name": "signal",
+                    "data": sig_nom.tolist(),
+                    "modifiers": [
+                        # Signal Strength (POI)
+                        {
+                            "name": "mu",
+                            "type": "normfactor",
+                            "data": None
+                        },
+                        # [新增] Signal Energy Scale (必须与背景同名以保持关联)
+                        {
+                            "name": "energy_scale_sys",
+                            "type": "histosys",
+                            "data": {
+                                "lo_data": sig_recE_down_scaled.tolist(),
+                                "hi_data": sig_recE_up_scaled.tolist()
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    # ... (observation 和 measurements 部分保持不变) ...
+    "observations": [
+        {
+            "name": "single_channel",
+            "data": obs_counts.tolist()
+        }
+    ],
+    "measurements": [
+        {
+            "name": "measurement",
+            "config": {
+                "poi": "mu",
+                "parameters": [
+                    {
+                        "name": "mu",
+                        "bounds": [[0, 20]],
+                        "inits": [1.0]
+                    },
+                    {
+                        "name": "mu_bkg",
+                        "bounds": [[0, 5]], 
+                        "inits": [1.0]
+                    }
+                ]
+            }
+        }
+    ],
+    "version": "1.0.0"
+}
+
+
+
+out_json = "/data/home/zzh/Filt_Event/UpperLimit/uncertainty/Transformer_baseline/model_with_free_bkg_ABCD.json"
+with open(out_json, "w") as f:
+    json.dump(spec, f, indent=4)
+
+print(f"[OK] JSON saved to {out_json}")
+
+
