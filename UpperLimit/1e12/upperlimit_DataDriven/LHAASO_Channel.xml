@@ -1,0 +1,26 @@
+
+<!DOCTYPE Channel  SYSTEM 'HistFactorySchema.dtd'>
+
+<Channel Name="LHAASO_Monopole_Channel" InputFile="./inputs_for_roostats.root">
+
+  <Data HistoName="h_data" />
+  <StatErrorConfig RelErrorThreshold="0.001" ConstraintType="Poisson" />
+
+  <Sample Name="Background" HistoName="h_bkg_nom" NormalizeByTheory="True">
+    <StatError Activate="True" />
+    <NormFactor Name="mu_bkg" Val="1.0" Low="0.0" High="5.0" />
+    <HistoSys Name="BkgShapeSyst" HistoNameLow="h_bkg_ShapeDown" HistoNameHigh="h_bkg_ShapeUp" />
+  </Sample>
+
+  <Sample Name="Signal" HistoName="h_sig_nom" NormalizeByTheory="True">
+    <StatError Activate="True" />
+    <NormFactor Name="mu" Val="1.0" Low="0.0" High="10.0" />
+    <OverallSys Name="recE_shift" Low="0.9962" High="1.0038" />
+    <OverallSys Name="R_ue_shift" Low="0.9986" High="1.0014" />
+    <OverallSys Name="thetaRec_resolution" Low="0.9998" High="1.0002" />
+    <HistoSys Name="SigShapeSyst" HistoNameLow="h_sig_ShapeDown" HistoNameHigh="h_sig_ShapeUp" />
+  </Sample>
+
+</Channel>
+
+

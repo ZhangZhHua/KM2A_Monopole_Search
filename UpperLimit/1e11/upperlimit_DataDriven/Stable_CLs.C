@@ -248,7 +248,7 @@ void Stable_CLs() {
     // 4. 配置纯频率派计算器 (Frequentist)
     // ------------------------------------------------------------------
     FrequentistCalculator fc(*data, *bModel, *mc);
-    fc.SetToys(20000, 10000); // 1000 个 Toy 足够画出漂亮的巴西图
+    fc.SetToys(5000, 2500); // 1000 个 Toy 足够画出漂亮的巴西图
     fc.UseSameAltToys();
     // ------------------------------------------------------------------
     // 5. 核心：重回 Profile Likelihood Ratio (PLR) 检验统计量
@@ -331,9 +331,9 @@ void Stable_CLs() {
     lat.DrawLatex(txtX, txtY, "LHAASO Preliminary");
     lat.DrawLatex(txtX, txtY - 0.06, "Monopole Analysis, #gamma = 10^{6}");
     lat.DrawLatex(txtX, txtY - 0.11, "90% C.L. Upper Limit");
-    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.3f", upperLimit));
-    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.3f", expLimit));
-    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.3f, %.3f]", expLimitMinus1, expLimitPlus1));
+    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.3e", upperLimit));
+    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.3e", expLimit));
+    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.3e, %.3e]", expLimitMinus1, expLimitPlus1));
 
     c1->SaveAs("./figures/Stable_1e11_CLs_scan.png");
     c1->SaveAs("/data/home/zzh/Filt_Event/Note_Writing/figures/Stable_1e11_CLs_scan.pdf");
@@ -406,6 +406,7 @@ void Stable_CLs() {
     pad1->Draw();
     pad1->cd();
     pad1->SetLogy(1);
+
     frame->GetYaxis()->SetTitle("Events / Bin");
     frame->GetYaxis()->SetTitleOffset(1.3); 
     frame->GetXaxis()->SetLabelSize(0); 

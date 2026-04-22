@@ -251,10 +251,10 @@ void RunLimit_Plot() {
     lat.DrawLatex(txtX, txtY, "LHAASO Preliminary");
     lat.DrawLatex(txtX, txtY - 0.06, "Monopole Analysis, #gamma = 10^{5}");
     lat.DrawLatex(txtX, txtY - 0.11, "90% C.L. Upper Limit");
-    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.3f", upperLimit));
-    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.3f", expLimit));
-    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.3f, %.3f]", expLimitMinus1, expLimitPlus1));
-    lat.DrawLatex(txtX, txtY - 0.32, Form("Expected #pm 2#sigma: [%.3f, %.3f]", expLimitMinus2, expLimitPlus2));
+    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.3e", upperLimit));
+    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.3e", expLimit));
+    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.3e, %.3e]", expLimitMinus1, expLimitPlus1));
+    lat.DrawLatex(txtX, txtY - 0.32, Form("Expected #pm 2#sigma: [%.3e, %.3e]", expLimitMinus2, expLimitPlus2));
 
 
     c1->SaveAs("./figures/1e11_CLs_scan.png");
@@ -286,7 +286,7 @@ void RunLimit_Plot() {
     model->plotOn(frame, Name("BkgLine"), LineColor(kBlue), LineWidth(2));
 
     mu->setConstant(false);
-    double signalScale = 10.0; 
+    double signalScale = 1.0; 
     mu->setMax(upperLimit * signalScale * 2.0);
     mu->setVal(upperLimit * signalScale); 
     

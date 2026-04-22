@@ -251,10 +251,10 @@ void RunLimit_Plot() {
     lat.DrawLatex(txtX, txtY, "LHAASO Preliminary");
     lat.DrawLatex(txtX, txtY - 0.06, "Monopole Analysis, #gamma = 10^{5}");
     lat.DrawLatex(txtX, txtY - 0.11, "90% C.L. Upper Limit");
-    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.3f", upperLimit));
-    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.3f", expLimit));
-    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.3f, %.3f]", expLimitMinus1, expLimitPlus1));
-    lat.DrawLatex(txtX, txtY - 0.32, Form("Expected #pm 2#sigma: [%.3f, %.3f]", expLimitMinus2, expLimitPlus2));
+    lat.DrawLatex(txtX, txtY - 0.17, Form("Observed #mu < %.2e", upperLimit));
+    lat.DrawLatex(txtX, txtY - 0.22, Form("Expected #mu < %.2e", expLimit));
+    lat.DrawLatex(txtX, txtY - 0.27, Form("Expected #pm 1#sigma: [%.2e, %.2e]", expLimitMinus1, expLimitPlus1));
+    lat.DrawLatex(txtX, txtY - 0.32, Form("Expected #pm 2#sigma: [%.2e, %.2e]", expLimitMinus2, expLimitPlus2));
 
 
     c1->SaveAs("./figures/1e10_CLs_scan.png");
@@ -298,7 +298,7 @@ void RunLimit_Plot() {
     
     
     // --- Canvas ---
-    TCanvas *c2 = new TCanvas("c2", "Fit Result", 1600, 1600);
+    TCanvas *c2 = new TCanvas("c2", "Fit Result", 1600, 1300);
     
     TPad *pad1 = new TPad("pad1", "pad1", 0, 0.3, 1, 1.0);
     pad1->SetBottomMargin(0.02); 

@@ -9,7 +9,7 @@ conda activate base
 cd /data/home/zzh/Filt_Event/UpperLimit/uncertainty/models_UL/
 
 hist2workspace driver.xml && root -l -b -q RunLimit_Plot.C
-
+hist2workspace driver.xml && time root -l -b -q Stable_CLs.C
 
 hist2workspace driver.xml && root -l -b -q RunLimit_Freq_Plot.C
 
